@@ -1,0 +1,60 @@
+{
+  "dataset": "BCI IIIB",
+  "method": "subject-wise affine-invariant Riemannian alignment + filter-bank tangent-space LinearSVC",
+  "selected_alpha": 1.0,
+  "selected_C": 0.1,
+  "grouped_cv": {
+    "selected_group_cv_accuracy": 0.6581632653061223,
+    "fold_accuracy": [
+      0.6581632653061225,
+      0.6377551020408163,
+      0.6632653061224489,
+      0.6632653061224489,
+      0.6683673469387755
+    ],
+    "candidate_mean_accuracy": {
+      "alpha=0.0,C=0.01": 0.6510204081632652,
+      "alpha=0.0,C=0.1": 0.6459183673469387,
+      "alpha=0.0,C=1": 0.65,
+      "alpha=0.0,C=10": 0.6489795918367347,
+      "alpha=0.5,C=0.01": 0.6551020408163264,
+      "alpha=0.5,C=0.1": 0.6561224489795918,
+      "alpha=0.5,C=1": 0.6561224489795918,
+      "alpha=0.5,C=10": 0.6551020408163264,
+      "alpha=1.0,C=0.01": 0.6571428571428571,
+      "alpha=1.0,C=0.1": 0.6581632653061223,
+      "alpha=1.0,C=1": 0.6551020408163265,
+      "alpha=1.0,C=10": 0.6551020408163265
+    },
+    "folds": 5,
+    "folding": "subject GroupKFold for PhysioNet; stratified trial folds because BCI subject IDs are absent"
+  },
+  "validation_accuracy_candidate": 0.6285714285714286,
+  "validation_accuracy_prior": 0.819047619047619,
+  "validation_gain_pp": -19.047619047619047,
+  "validation_paired_standard_error_pp": 3.58412719266292,
+  "validation_acceptance_rule": "use candidate only when paired validation gain exceeds one standard error; otherwise retain prior",
+  "accepted_on_validation": false,
+  "prior_test_accuracy": 0.8428571428571429,
+  "test_accuracy": 0.8428571428571429,
+  "candidate_test_accuracy_diagnostic": 0.6190476190476191,
+  "delta_vs_prior_pp": 0.0,
+  "test_macro_f1": 0.8428250663400694,
+  "test_kappa": 0.6857142857142857,
+  "test_confusion_matrix": [
+    [
+      87,
+      18
+    ],
+    [
+      15,
+      90
+    ]
+  ],
+  "baseline_15_model_best": 0.8238095238095238,
+  "delta_vs_15_model_best_pp": 1.904761904761909,
+  "paired_test_uncertainty": null,
+  "n_test": 210,
+  "runtime_seconds": 0.54,
+  "test_time_note": "per-subject unlabeled covariance batches for PhysioNet; whole split batch for BCI because subject IDs were not retained"
+}

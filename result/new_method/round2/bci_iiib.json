@@ -1,0 +1,176 @@
+{
+  "dataset": "BCI IIIB",
+  "selected_by_validation": {
+    "selected": "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.65",
+    "feature_selection": {
+      "bands_hz": [
+        [
+          24.0,
+          30.0
+        ],
+        [
+          20.0,
+          24.0
+        ]
+      ],
+      "per_band": [
+        {
+          "band_hz": [
+            8.0,
+            12.0
+          ],
+          "family": "temporal_power",
+          "validation_accuracy": 0.6142857142857143,
+          "C": 0.1,
+          "kernel": "rbf",
+          "gamma": "scale",
+          "standardize": true
+        },
+        {
+          "band_hz": [
+            12.0,
+            16.0
+          ],
+          "family": "temporal_power",
+          "validation_accuracy": 0.5857142857142857,
+          "C": 0.1,
+          "kernel": "rbf",
+          "gamma": "scale",
+          "standardize": true
+        },
+        {
+          "band_hz": [
+            16.0,
+            20.0
+          ],
+          "family": "tangent",
+          "validation_accuracy": 0.5857142857142857,
+          "C": 0.01,
+          "kernel": "mlp-(8,)",
+          "gamma": null,
+          "standardize": true
+        },
+        {
+          "band_hz": [
+            20.0,
+            24.0
+          ],
+          "family": "temporal_power",
+          "validation_accuracy": 0.6333333333333333,
+          "C": 3.0,
+          "kernel": "linear",
+          "gamma": null,
+          "standardize": false
+        },
+        {
+          "band_hz": [
+            24.0,
+            30.0
+          ],
+          "family": "temporal_power",
+          "validation_accuracy": 0.680952380952381,
+          "C": 5.0,
+          "kernel": "random-forest",
+          "gamma": null,
+          "standardize": false
+        }
+      ],
+      "selected_band_count": 2,
+      "validation_accuracy": 0.7095238095238096
+    },
+    "blend_search": {
+      "selected_val_accuracy": 0.819047619047619,
+      "candidates_val_accuracy": {
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.00": 0.7095238095238096,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.05": 0.7285714285714285,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.10": 0.7333333333333333,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.15": 0.7380952380952381,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.20": 0.7476190476190476,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.25": 0.7571428571428571,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.30": 0.7714285714285715,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.35": 0.780952380952381,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.40": 0.8,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.45": 0.8142857142857143,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.50": 0.8,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.55": 0.8095238095238095,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.60": 0.8047619047619048,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.65": 0.819047619047619,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.70": 0.8142857142857143,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.75": 0.819047619047619,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.80": 0.819047619047619,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.85": 0.819047619047619,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.90": 0.8142857142857143,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=0.95": 0.8095238095238095,
+        "TV-FB-Hybrid + EEG-Deformer seed 42; weight_right=1.00": 0.8047619047619048,
+        "TV-FB-Hybrid": 0.7095238095238096,
+        "EEG-Deformer seed 42": 0.8047619047619048
+      }
+    }
+  },
+  "baseline": {
+    "best_model": "EEG-Deformer",
+    "best_accuracy": 0.8238095238095238,
+    "mean_accuracy": 0.7149659863945578,
+    "model_rows": 14
+  },
+  "validation": {
+    "n": 210,
+    "accuracy": 0.819047619047619,
+    "accuracy_ci95_trial_bootstrap": [
+      0.7666666666666667,
+      0.8714285714285714
+    ],
+    "macro_f1": 0.8184548184548184,
+    "kappa": 0.638095238095238,
+    "confusion_matrix": [
+      [
+        80,
+        25
+      ],
+      [
+        13,
+        92
+      ]
+    ]
+  },
+  "test": {
+    "n": 210,
+    "accuracy": 0.8428571428571429,
+    "accuracy_ci95_trial_bootstrap": [
+      0.7952380952380952,
+      0.8904761904761904
+    ],
+    "macro_f1": 0.8428250663400694,
+    "kappa": 0.6857142857142857,
+    "confusion_matrix": [
+      [
+        87,
+        18
+      ],
+      [
+        15,
+        90
+      ]
+    ]
+  },
+  "delta_vs_best_baseline_pp": 1.904761904761909,
+  "deformer_runs": [
+    {
+      "seed": 42,
+      "best_val_accuracy": 0.8047619047619048,
+      "epochs_run": 57
+    },
+    {
+      "seed": 43,
+      "best_val_accuracy": 0.7952380952380952,
+      "epochs_run": 51
+    },
+    {
+      "seed": 44,
+      "best_val_accuracy": 0.780952380952381,
+      "epochs_run": 68
+    }
+  ],
+  "runtime_seconds": 444.05,
+  "delta_vs_model_mean_pp": 12.789115646258509
+}

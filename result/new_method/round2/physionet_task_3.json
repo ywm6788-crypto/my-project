@@ -1,0 +1,246 @@
+{
+  "dataset": "PhysioNet task 3",
+  "selected_by_validation": {
+    "selected": "ROI_filterbank + all_channel_CSP_power; weight_right=0.50",
+    "blend_search": {
+      "selected_val_accuracy": 0.8101010101010101,
+      "candidates_val_accuracy": {
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.00": 0.7575757575757576,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.05": 0.7616161616161616,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.10": 0.7676767676767676,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.15": 0.7737373737373737,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.20": 0.7757575757575758,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.25": 0.7797979797979798,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.30": 0.7878787878787878,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.35": 0.7858585858585858,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.40": 0.7919191919191919,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.45": 0.806060606060606,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.50": 0.8101010101010101,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.55": 0.8080808080808081,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.60": 0.804040404040404,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.65": 0.804040404040404,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.70": 0.806060606060606,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.75": 0.7898989898989899,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.80": 0.7858585858585858,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.85": 0.7838383838383839,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.90": 0.7878787878787878,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=0.95": 0.7797979797979798,
+        "ROI_filterbank + all_channel_CSP_power; weight_right=1.00": 0.7696969696969697,
+        "ROI_filterbank": 0.7575757575757576,
+        "all_channel_CSP_power": 0.7696969696969697
+      }
+    },
+    "roi_filterbank": {
+      "bands_hz": [
+        [
+          24.0,
+          30.0
+        ],
+        [
+          20.0,
+          24.0
+        ],
+        [
+          12.0,
+          16.0
+        ]
+      ],
+      "per_band": [
+        {
+          "band_hz": [
+            8.0,
+            12.0
+          ],
+          "family": "tangent",
+          "validation_accuracy": 0.5838383838383838,
+          "C": 3.0,
+          "kernel": "linear",
+          "gamma": null,
+          "standardize": false
+        },
+        {
+          "band_hz": [
+            12.0,
+            16.0
+          ],
+          "family": "tangent",
+          "validation_accuracy": 0.6424242424242425,
+          "C": 0.003,
+          "kernel": "linear",
+          "gamma": null,
+          "standardize": true
+        },
+        {
+          "band_hz": [
+            16.0,
+            20.0
+          ],
+          "family": "tangent",
+          "validation_accuracy": 0.6080808080808081,
+          "C": 0.003,
+          "kernel": "linear",
+          "gamma": null,
+          "standardize": false
+        },
+        {
+          "band_hz": [
+            20.0,
+            24.0
+          ],
+          "family": "tangent",
+          "validation_accuracy": 0.694949494949495,
+          "C": 0.3,
+          "kernel": "linear",
+          "gamma": null,
+          "standardize": false
+        },
+        {
+          "band_hz": [
+            24.0,
+            30.0
+          ],
+          "family": "tangent",
+          "validation_accuracy": 0.7313131313131314,
+          "C": 0.003,
+          "kernel": "linear",
+          "gamma": null,
+          "standardize": false
+        }
+      ],
+      "selected_band_count": 3,
+      "validation_accuracy": 0.7575757575757576
+    },
+    "full_channel_CSP_power": {
+      "bands_hz": [
+        [
+          24.0,
+          30.0
+        ],
+        [
+          12.0,
+          16.0
+        ],
+        [
+          20.0,
+          24.0
+        ],
+        [
+          8.0,
+          12.0
+        ],
+        [
+          16.0,
+          20.0
+        ]
+      ],
+      "validation_accuracy": 0.7696969696969697,
+      "per_band": [
+        {
+          "band_hz": [
+            8.0,
+            12.0
+          ],
+          "family": "CSP",
+          "components_per_class": 6,
+          "validation_accuracy": 0.6404040404040404,
+          "kernel": "linear",
+          "C": 0.003
+        },
+        {
+          "band_hz": [
+            12.0,
+            16.0
+          ],
+          "family": "CSP",
+          "components_per_class": 6,
+          "validation_accuracy": 0.696969696969697,
+          "kernel": "linear",
+          "C": 3.0
+        },
+        {
+          "band_hz": [
+            16.0,
+            20.0
+          ],
+          "family": "CSP",
+          "components_per_class": 6,
+          "validation_accuracy": 0.6323232323232323,
+          "kernel": "linear",
+          "C": 0.003
+        },
+        {
+          "band_hz": [
+            20.0,
+            24.0
+          ],
+          "family": "CSP",
+          "components_per_class": 6,
+          "validation_accuracy": 0.6686868686868687,
+          "kernel": "linear",
+          "C": 0.003
+        },
+        {
+          "band_hz": [
+            24.0,
+            30.0
+          ],
+          "family": "CSP",
+          "components_per_class": 6,
+          "validation_accuracy": 0.7151515151515152,
+          "kernel": "linear",
+          "C": 3.0
+        }
+      ]
+    }
+  },
+  "baseline": {
+    "best_model": "shallowconvnet",
+    "best_accuracy": 0.7575757575757576,
+    "mean_accuracy": 0.5544107744107744,
+    "model_rows": 15
+  },
+  "validation": {
+    "n": 495,
+    "accuracy": 0.8101010101010101,
+    "accuracy_ci95_trial_bootstrap": [
+      0.7757575757575758,
+      0.8444444444444444
+    ],
+    "macro_f1": 0.8100940346752865,
+    "kappa": 0.6202438666079036,
+    "confusion_matrix": [
+      [
+        202,
+        44
+      ],
+      [
+        50,
+        199
+      ]
+    ]
+  },
+  "test": {
+    "n": 990,
+    "accuracy": 0.7373737373737373,
+    "accuracy_ci95_trial_bootstrap": [
+      0.7110858585858586,
+      0.7646464646464647
+    ],
+    "macro_f1": 0.7361288232616692,
+    "kappa": 0.4748953462753066,
+    "confusion_matrix": [
+      [
+        331,
+        165
+      ],
+      [
+        95,
+        399
+      ]
+    ]
+  },
+  "delta_vs_best_baseline_pp": -2.020202020202022,
+  "runtime_seconds": 96.71,
+  "input_channels": 64,
+  "delta_vs_model_mean_pp": 18.296296296296298
+}

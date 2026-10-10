@@ -1,0 +1,801 @@
+{
+  "dataset": "PhysioNet task 2",
+  "method": "unlabeled domain covariance alignment + validation-selected blend with prior best",
+  "adaptation_scope": "per subject for PhysioNet; one unlabeled provided split batch for BCI (transductive)",
+  "selected_aligned_probability_weight": 0.0,
+  "validation_accuracy": 0.7696969696969697,
+  "prior_validation_accuracy": 0.7696969696969697,
+  "aligned_only_validation_accuracy": 0.7070707070707071,
+  "validation_weight_sweep": {
+    "aligned_weight_0.00": 0.7696969696969697,
+    "aligned_weight_0.25": 0.7595959595959596,
+    "aligned_weight_0.50": 0.7595959595959596,
+    "aligned_weight_0.75": 0.7373737373737373,
+    "aligned_weight_1.00": 0.7070707070707071
+  },
+  "aligned_feature_selection": {
+    "bands_hz": [
+      [
+        8.0,
+        12.0
+      ],
+      [
+        20.0,
+        24.0
+      ],
+      [
+        24.0,
+        30.0
+      ],
+      [
+        12.0,
+        16.0
+      ]
+    ],
+    "per_band": [
+      {
+        "band_hz": [
+          8.0,
+          12.0
+        ],
+        "family": "CSP",
+        "validation_accuracy": 0.6505050505050505,
+        "C": 0.03,
+        "kernel": "linear",
+        "gamma": null,
+        "standardize": false
+      },
+      {
+        "band_hz": [
+          12.0,
+          16.0
+        ],
+        "family": "temporal_power",
+        "validation_accuracy": 0.6202020202020202,
+        "C": 0.003,
+        "kernel": "linear",
+        "gamma": null,
+        "standardize": true
+      },
+      {
+        "band_hz": [
+          16.0,
+          20.0
+        ],
+        "family": "CSP",
+        "validation_accuracy": 0.5595959595959596,
+        "C": 0.3,
+        "kernel": "linear",
+        "gamma": null,
+        "standardize": false
+      },
+      {
+        "band_hz": [
+          20.0,
+          24.0
+        ],
+        "family": "tangent",
+        "validation_accuracy": 0.6484848484848484,
+        "C": 3.0,
+        "kernel": "linear",
+        "gamma": null,
+        "standardize": false
+      },
+      {
+        "band_hz": [
+          24.0,
+          30.0
+        ],
+        "family": "tangent",
+        "validation_accuracy": 0.6222222222222222,
+        "C": 0.003,
+        "kernel": "linear",
+        "gamma": null,
+        "standardize": false
+      }
+    ],
+    "selected_band_count": 4,
+    "validation_accuracy": 0.7070707070707071
+  },
+  "alignment_domains": {
+    "train": {
+      "domains": [
+        {
+          "domain": 2,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 64.65885174988313
+        },
+        {
+          "domain": 3,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 74.9454904317953
+        },
+        {
+          "domain": 4,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 74.94756620093882
+        },
+        {
+          "domain": 6,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 70.50929539055454
+        },
+        {
+          "domain": 7,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 74.39535177467448
+        },
+        {
+          "domain": 8,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 75.39507249554153
+        },
+        {
+          "domain": 9,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 68.92057010286516
+        },
+        {
+          "domain": 14,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 72.32649447663316
+        },
+        {
+          "domain": 15,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 72.11117873177659
+        },
+        {
+          "domain": 17,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 67.35251866787091
+        },
+        {
+          "domain": 18,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 78.84473037224322
+        },
+        {
+          "domain": 20,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 59.09720416295855
+        },
+        {
+          "domain": 21,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 77.07002693733752
+        },
+        {
+          "domain": 22,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 72.05532903701058
+        },
+        {
+          "domain": 24,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 65.92758278522382
+        },
+        {
+          "domain": 25,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 74.8483267431027
+        },
+        {
+          "domain": 26,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 75.01022986555847
+        },
+        {
+          "domain": 28,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 69.47762714424894
+        },
+        {
+          "domain": 29,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 70.12249103777512
+        },
+        {
+          "domain": 30,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 79.15677469962044
+        },
+        {
+          "domain": 33,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 60.60069065445958
+        },
+        {
+          "domain": 34,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 63.56767987044295
+        },
+        {
+          "domain": 35,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 69.93561393673755
+        },
+        {
+          "domain": 36,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 78.14847450469126
+        },
+        {
+          "domain": 38,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 68.0359926115834
+        },
+        {
+          "domain": 39,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 63.48833738618479
+        },
+        {
+          "domain": 40,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 60.72543904185462
+        },
+        {
+          "domain": 41,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 74.27475753262827
+        },
+        {
+          "domain": 42,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 74.28194494343252
+        },
+        {
+          "domain": 44,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 72.70569254873021
+        },
+        {
+          "domain": 47,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 81.53475515954786
+        },
+        {
+          "domain": 49,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 72.12245320519594
+        },
+        {
+          "domain": 50,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 76.70749177784427
+        },
+        {
+          "domain": 51,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 70.96814213322521
+        },
+        {
+          "domain": 52,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 62.95549024884285
+        },
+        {
+          "domain": 53,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 72.26540184859384
+        },
+        {
+          "domain": 54,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 65.8629427649029
+        },
+        {
+          "domain": 55,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 72.78826221030022
+        },
+        {
+          "domain": 56,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 77.1044893959908
+        },
+        {
+          "domain": 58,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 74.03141038126495
+        },
+        {
+          "domain": 59,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 73.6358052182979
+        },
+        {
+          "domain": 60,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 63.78127179199986
+        },
+        {
+          "domain": 61,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 76.40168257297717
+        },
+        {
+          "domain": 62,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 71.08566308748456
+        },
+        {
+          "domain": 63,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 74.77689273153231
+        },
+        {
+          "domain": 64,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 73.55453280810893
+        },
+        {
+          "domain": 67,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 60.445512787939414
+        },
+        {
+          "domain": 68,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 64.27466034885151
+        },
+        {
+          "domain": 70,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 77.71747838311356
+        },
+        {
+          "domain": 72,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 62.1153413862938
+        },
+        {
+          "domain": 74,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 73.99835306727827
+        },
+        {
+          "domain": 75,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 64.91436802501659
+        },
+        {
+          "domain": 76,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 78.93736112865801
+        },
+        {
+          "domain": 78,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 75.3012554500306
+        },
+        {
+          "domain": 83,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 70.97974368727154
+        },
+        {
+          "domain": 84,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 59.60908243954263
+        },
+        {
+          "domain": 86,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 77.82424706569668
+        },
+        {
+          "domain": 87,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 71.24624772327178
+        },
+        {
+          "domain": 88,
+          "n_trials": 57,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 57.35345937080741
+        },
+        {
+          "domain": 89,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 74.74844139212419
+        },
+        {
+          "domain": 92,
+          "n_trials": 57,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 74.59580116219976
+        },
+        {
+          "domain": 93,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 62.81213038934739
+        },
+        {
+          "domain": 94,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 66.17371579129068
+        },
+        {
+          "domain": 95,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 65.77476743339999
+        },
+        {
+          "domain": 96,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 73.60812958393996
+        },
+        {
+          "domain": 98,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 74.50596604871949
+        },
+        {
+          "domain": 99,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 77.36693476532716
+        },
+        {
+          "domain": 100,
+          "n_trials": 36,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 60.03475705764133
+        },
+        {
+          "domain": 101,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 71.20479336363643
+        },
+        {
+          "domain": 102,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 74.63780031969448
+        },
+        {
+          "domain": 103,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 72.39903845618468
+        },
+        {
+          "domain": 104,
+          "n_trials": 43,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 73.70338094415922
+        },
+        {
+          "domain": 105,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 73.21784762519687
+        },
+        {
+          "domain": 106,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 63.37658603937678
+        },
+        {
+          "domain": 107,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 79.96129347914804
+        },
+        {
+          "domain": 109,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 71.43555032781438
+        }
+      ],
+      "n_domains": 76
+    },
+    "val": {
+      "domains": [
+        {
+          "domain": 10,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 67.71168229574526
+        },
+        {
+          "domain": 13,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 66.25468644641153
+        },
+        {
+          "domain": 16,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 79.21946501068932
+        },
+        {
+          "domain": 19,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 71.46233349920831
+        },
+        {
+          "domain": 31,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 75.18622567614356
+        },
+        {
+          "domain": 32,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 56.082783954771635
+        },
+        {
+          "domain": 46,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 72.26518680591937
+        },
+        {
+          "domain": 66,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 70.19159423699769
+        },
+        {
+          "domain": 80,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 68.31674521688463
+        },
+        {
+          "domain": 90,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 71.93882977593354
+        },
+        {
+          "domain": 108,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 66.94760233808158
+        }
+      ],
+      "n_domains": 11
+    },
+    "test": {
+      "domains": [
+        {
+          "domain": 1,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 73.60916332496797
+        },
+        {
+          "domain": 5,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 63.339883780591876
+        },
+        {
+          "domain": 11,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 74.06603907831905
+        },
+        {
+          "domain": 12,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 76.25228149687348
+        },
+        {
+          "domain": 23,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 73.67786615920447
+        },
+        {
+          "domain": 27,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 64.6893501271827
+        },
+        {
+          "domain": 37,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 75.71182580197215
+        },
+        {
+          "domain": 43,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 65.03580446845878
+        },
+        {
+          "domain": 45,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 76.98644327805194
+        },
+        {
+          "domain": 48,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 70.17720436942896
+        },
+        {
+          "domain": 57,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 67.18483385372741
+        },
+        {
+          "domain": 65,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 72.07026798888516
+        },
+        {
+          "domain": 69,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 68.609618730196
+        },
+        {
+          "domain": 71,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 72.91560417747031
+        },
+        {
+          "domain": 73,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 77.75443200157343
+        },
+        {
+          "domain": 77,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 69.07297818528562
+        },
+        {
+          "domain": 79,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 70.29747603594431
+        },
+        {
+          "domain": 81,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 75.2382201052531
+        },
+        {
+          "domain": 82,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 74.42602811574857
+        },
+        {
+          "domain": 85,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 48.04538450222061
+        },
+        {
+          "domain": 91,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 78.30332024005872
+        },
+        {
+          "domain": 97,
+          "n_trials": 45,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 70.785363858786
+        }
+      ],
+      "n_domains": 22
+    }
+  },
+  "test": {
+    "n": 990,
+    "accuracy": 0.7535353535353535,
+    "accuracy_ci95_trial_bootstrap": [
+      0.7262626262626263,
+      0.7797979797979798
+    ],
+    "macro_f1": 0.7530475462192434,
+    "kappa": 0.5069016620328978,
+    "confusion_matrix": [
+      [
+        395,
+        102
+      ],
+      [
+        142,
+        351
+      ]
+    ]
+  },
+  "prior_test_accuracy": 0.7535353535353535,
+  "delta_vs_prior_best_pp": 0.0,
+  "baseline": {
+    "best_model": "shallowconvnet",
+    "best_accuracy": 0.7424242424242424,
+    "mean_accuracy": 0.5641077441077441,
+    "model_rows": 15
+  },
+  "delta_vs_15_model_best_pp": 1.1111111111111072,
+  "runtime_seconds": 27.99
+}

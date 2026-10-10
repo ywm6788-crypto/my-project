@@ -1,0 +1,7 @@
+﻿dataset,n_test,previous_best_accuracy,validation_accuracy,test_accuracy,test_ci95_low,test_ci95_high,macro_f1,best_15_model,best_15_model_accuracy,delta_vs_previous_pp,delta_vs_best_15_pp,selection
+PhysioNet task 1,990,0.706061,0.816162,0.709091,0.679798,0.737374,0.709080,shallowconvnet,0.719192,0.303030,-1.010101,previous_portfolio
+PhysioNet task 2,990,0.753535,0.769697,0.753535,0.726263,0.780808,0.753048,shallowconvnet,0.742424,0.000000,1.111111,narrow_mu_beta_full_csp2 + ShallowConvNet_seed42; right_weight=0.75
+PhysioNet task 3,990,0.737374,0.814141,0.756566,0.729293,0.782828,0.756384,shallowconvnet,0.757576,1.919192,-0.101010,previous_portfolio
+PhysioNet task 4,990,0.610101,0.698990,0.651515,0.622222,0.681818,0.651216,shallowconvnet,0.662626,4.141414,-1.111111,previous_portfolio + classic_phases_plus_full_csp2; csp_weight=0.25
+BCI IIIA,49,0.653061,0.877551,0.653061,0.510204,0.775510,0.652687,EEG-Conformer,0.591837,0.000000,6.122449,aligned blend weight=0.25
+BCI IIIB,210,0.842857,0.819048,0.842857,0.790476,0.890476,0.842825,EEG-Deformer,0.823810,0.000000,1.904762,aligned blend weight=0.00

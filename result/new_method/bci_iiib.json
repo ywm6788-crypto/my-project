@@ -1,0 +1,115 @@
+{
+  "dataset": "BCI IIIB",
+  "task": null,
+  "method": "Tri-view filter-bank hybrid classifier (TV-FB-Hybrid)",
+  "split": "existing benchmark split; hyperparameters selected on validation partition",
+  "sampling_rate_hz": 125.0,
+  "train_trials": 980,
+  "validation_trials": 210,
+  "metrics": {
+    "n_test": 210,
+    "accuracy": 0.719047619047619,
+    "accuracy_ci95": [
+      0.6571428571428571,
+      0.7761904761904762
+    ],
+    "macro_f1": 0.7185306344987392,
+    "kappa": 0.4380952380952381,
+    "confusion_matrix": [
+      [
+        80,
+        25
+      ],
+      [
+        34,
+        71
+      ]
+    ]
+  },
+  "selection": {
+    "bands_hz": [
+      [
+        24.0,
+        30.0
+      ],
+      [
+        20.0,
+        24.0
+      ]
+    ],
+    "per_band": [
+      {
+        "band_hz": [
+          8.0,
+          12.0
+        ],
+        "family": "temporal_power",
+        "validation_accuracy": 0.6142857142857143,
+        "C": 0.1,
+        "kernel": "rbf",
+        "gamma": "scale",
+        "standardize": true
+      },
+      {
+        "band_hz": [
+          12.0,
+          16.0
+        ],
+        "family": "temporal_power",
+        "validation_accuracy": 0.5857142857142857,
+        "C": 0.1,
+        "kernel": "rbf",
+        "gamma": "scale",
+        "standardize": true
+      },
+      {
+        "band_hz": [
+          16.0,
+          20.0
+        ],
+        "family": "tangent",
+        "validation_accuracy": 0.5857142857142857,
+        "C": 0.01,
+        "kernel": "mlp-(8,)",
+        "gamma": null,
+        "standardize": true
+      },
+      {
+        "band_hz": [
+          20.0,
+          24.0
+        ],
+        "family": "temporal_power",
+        "validation_accuracy": 0.6333333333333333,
+        "C": 3.0,
+        "kernel": "linear",
+        "gamma": null,
+        "standardize": false
+      },
+      {
+        "band_hz": [
+          24.0,
+          30.0
+        ],
+        "family": "temporal_power",
+        "validation_accuracy": 0.680952380952381,
+        "C": 5.0,
+        "kernel": "random-forest",
+        "gamma": null,
+        "standardize": false
+      }
+    ],
+    "selected_band_count": 2,
+    "validation_accuracy": 0.7095238095238096
+  },
+  "baseline": {
+    "path": "result\\IIIB.csv",
+    "n_models": 14,
+    "mean_accuracy": 0.7149659863945578,
+    "best_model": "EEG-Deformer",
+    "best_accuracy": 0.8238095238095238
+  },
+  "runtime_seconds": 29.72,
+  "delta_vs_best_baseline_pp": -10.476,
+  "delta_vs_15_model_mean_pp": 0.408
+}

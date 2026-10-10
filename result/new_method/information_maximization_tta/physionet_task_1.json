@@ -1,0 +1,334 @@
+{
+  "dataset": "PhysioNet task 1",
+  "method": "T-TIME-inspired label-free information-maximization logit-bias adaptation",
+  "selected_preset": "mi_full",
+  "selected_hyperparameters": {
+    "beta": 1.0,
+    "ridge": 0.1,
+    "mix": 1.0
+  },
+  "validation_accuracy_before": 0.8161616161616162,
+  "validation_accuracy_after": 0.8262626262626263,
+  "validation_gain_pp": 1.0101010101010055,
+  "validation_gain_standard_error_pp": 0.96463324333845,
+  "selection_rule": "choose highest validation accuracy among presets whose paired gain exceeds one validation-domain standard error; otherwise keep prior model",
+  "validation_candidates": {
+    "no_adaptation": {
+      "accuracy": 0.8161616161616162,
+      "gain_pp": 0.0,
+      "gain_se_pp": 0.0
+    },
+    "mi_weak": {
+      "accuracy": 0.8161616161616162,
+      "gain_pp": 0.0,
+      "gain_se_pp": 0.0
+    },
+    "mi_mid": {
+      "accuracy": 0.8161616161616162,
+      "gain_pp": 0.0,
+      "gain_se_pp": 0.0
+    },
+    "mi_small_shift": {
+      "accuracy": 0.8202020202020202,
+      "gain_pp": 0.404040404040404,
+      "gain_se_pp": 0.503026246383383
+    },
+    "mi_standard": {
+      "accuracy": 0.8181818181818182,
+      "gain_pp": 0.202020202020202,
+      "gain_se_pp": 0.632423266363577
+    },
+    "mi_full": {
+      "accuracy": 0.8262626262626263,
+      "gain_pp": 1.0101010101010104,
+      "gain_se_pp": 0.96463324333845
+    }
+  },
+  "test": {
+    "n": 990,
+    "accuracy": 0.7181818181818181,
+    "accuracy_ci95_trial_bootstrap": [
+      0.6898989898989899,
+      0.7454545454545455
+    ],
+    "macro_f1": 0.7181792302959623,
+    "kappa": 0.4363728375008673,
+    "confusion_matrix": [
+      [
+        357,
+        137
+      ],
+      [
+        142,
+        354
+      ]
+    ]
+  },
+  "prior_test_accuracy": 0.7090909090909091,
+  "delta_vs_prior_pp": 0.9090909090909038,
+  "paired_delta_uncertainty": {
+    "unit": "held-out subject (paired cluster bootstrap)",
+    "n_subjects": 22,
+    "resamples": 20000,
+    "delta_pp": 0.9090909090909078,
+    "ci95_delta_pp": [
+      -0.10101010101010267,
+      1.9191919191919191
+    ],
+    "bootstrap_probability_delta_le_zero": 0.0499
+  },
+  "baseline": {
+    "best_model": "shallowconvnet",
+    "best_accuracy": 0.7191919191919192,
+    "mean_accuracy": 0.5655892255892258,
+    "model_rows": 15
+  },
+  "delta_vs_15_model_best_pp": -0.10101010101010166,
+  "test_adaptation": {
+    "n_domains": 22,
+    "domains": [
+      {
+        "domain": 1,
+        "n": 45,
+        "offsets": [
+          0.0581581799491445,
+          -0.0581581799491445
+        ],
+        "optimizer_converged": true,
+        "iterations": 3,
+        "objective": -0.0765994171617596
+      },
+      {
+        "domain": 5,
+        "n": 45,
+        "offsets": [
+          0.02038939903450551,
+          -0.02038939903450551
+        ],
+        "optimizer_converged": true,
+        "iterations": 2,
+        "objective": -0.02553769546587105
+      },
+      {
+        "domain": 11,
+        "n": 45,
+        "offsets": [
+          0.004704092771787845,
+          -0.004704092771787845
+        ],
+        "optimizer_converged": true,
+        "iterations": 2,
+        "objective": -0.030646912752503235
+      },
+      {
+        "domain": 12,
+        "n": 45,
+        "offsets": [
+          -0.05757119410355586,
+          0.05757119410355586
+        ],
+        "optimizer_converged": true,
+        "iterations": 3,
+        "objective": -0.030641969929267657
+      },
+      {
+        "domain": 23,
+        "n": 45,
+        "offsets": [
+          0.013751257782870747,
+          -0.013751257782870747
+        ],
+        "optimizer_converged": true,
+        "iterations": 2,
+        "objective": -0.08507461568848873
+      },
+      {
+        "domain": 27,
+        "n": 45,
+        "offsets": [
+          0.047215223312127776,
+          -0.047215223312127776
+        ],
+        "optimizer_converged": true,
+        "iterations": 3,
+        "objective": -0.052183220107413116
+      },
+      {
+        "domain": 37,
+        "n": 45,
+        "offsets": [
+          -0.09458476801670324,
+          0.09458476801670324
+        ],
+        "optimizer_converged": true,
+        "iterations": 3,
+        "objective": -0.032993040604546525
+      },
+      {
+        "domain": 43,
+        "n": 45,
+        "offsets": [
+          -0.0013270589303083014,
+          0.0013270589303083014
+        ],
+        "optimizer_converged": true,
+        "iterations": 2,
+        "objective": -0.037674602850611125
+      },
+      {
+        "domain": 45,
+        "n": 45,
+        "offsets": [
+          0.006387520274170319,
+          -0.006387520274170319
+        ],
+        "optimizer_converged": true,
+        "iterations": 2,
+        "objective": -0.0524275488820949
+      },
+      {
+        "domain": 48,
+        "n": 45,
+        "offsets": [
+          -0.042275103325417715,
+          0.042275103325417715
+        ],
+        "optimizer_converged": true,
+        "iterations": 3,
+        "objective": -0.10644473154984517
+      },
+      {
+        "domain": 57,
+        "n": 45,
+        "offsets": [
+          0.044676611326728864,
+          -0.044676611326728864
+        ],
+        "optimizer_converged": true,
+        "iterations": 3,
+        "objective": -0.08096846088094563
+      },
+      {
+        "domain": 65,
+        "n": 45,
+        "offsets": [
+          0.01370355931526664,
+          -0.01370355931526664
+        ],
+        "optimizer_converged": true,
+        "iterations": 2,
+        "objective": -0.041776222222220306
+      },
+      {
+        "domain": 69,
+        "n": 45,
+        "offsets": [
+          0.08201017131466447,
+          -0.08201017131466447
+        ],
+        "optimizer_converged": true,
+        "iterations": 3,
+        "objective": -0.04550846958038859
+      },
+      {
+        "domain": 71,
+        "n": 45,
+        "offsets": [
+          -0.02477956707812711,
+          0.02477956707812711
+        ],
+        "optimizer_converged": true,
+        "iterations": 2,
+        "objective": -0.05515156298513609
+      },
+      {
+        "domain": 73,
+        "n": 45,
+        "offsets": [
+          -0.013423192381835272,
+          0.013423192381835272
+        ],
+        "optimizer_converged": true,
+        "iterations": 2,
+        "objective": -0.04430800104094789
+      },
+      {
+        "domain": 77,
+        "n": 45,
+        "offsets": [
+          0.026023296165193235,
+          -0.026023296165193235
+        ],
+        "optimizer_converged": true,
+        "iterations": 2,
+        "objective": -0.036777702070568394
+      },
+      {
+        "domain": 79,
+        "n": 45,
+        "offsets": [
+          0.05430687694313188,
+          -0.05430687694313188
+        ],
+        "optimizer_converged": true,
+        "iterations": 3,
+        "objective": -0.09072191358112142
+      },
+      {
+        "domain": 81,
+        "n": 45,
+        "offsets": [
+          -0.08012873186605377,
+          0.08012873186605377
+        ],
+        "optimizer_converged": true,
+        "iterations": 3,
+        "objective": -0.0437370051909688
+      },
+      {
+        "domain": 82,
+        "n": 45,
+        "offsets": [
+          0.056648673166016565,
+          -0.056648673166016565
+        ],
+        "optimizer_converged": true,
+        "iterations": 3,
+        "objective": -0.09914026837507081
+      },
+      {
+        "domain": 85,
+        "n": 45,
+        "offsets": [
+          0.02103273657695926,
+          -0.02103273657695926
+        ],
+        "optimizer_converged": true,
+        "iterations": 2,
+        "objective": -0.04225441393518616
+      },
+      {
+        "domain": 91,
+        "n": 45,
+        "offsets": [
+          -0.008659525898029416,
+          0.008659525898029416
+        ],
+        "optimizer_converged": true,
+        "iterations": 2,
+        "objective": -0.07559130452628988
+      },
+      {
+        "domain": 97,
+        "n": 45,
+        "offsets": [
+          0.005367460745327993,
+          -0.005367460745327993
+        ],
+        "optimizer_converged": true,
+        "iterations": 2,
+        "objective": -0.028535596000580997
+      }
+    ]
+  }
+}

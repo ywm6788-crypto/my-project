@@ -1,0 +1,181 @@
+{
+  "dataset": "BCI IIIA",
+  "method": "unlabeled domain covariance alignment + validation-selected blend with prior best",
+  "adaptation_scope": "per subject for PhysioNet; one unlabeled provided split batch for BCI (transductive)",
+  "selected_aligned_probability_weight": 0.25,
+  "validation_accuracy": 0.8775510204081632,
+  "prior_validation_accuracy": 0.7755102040816326,
+  "aligned_only_validation_accuracy": 0.8571428571428571,
+  "validation_weight_sweep": {
+    "aligned_weight_0.00": 0.7755102040816326,
+    "aligned_weight_0.25": 0.8775510204081632,
+    "aligned_weight_0.50": 0.8775510204081632,
+    "aligned_weight_0.75": 0.8775510204081632,
+    "aligned_weight_1.00": 0.8571428571428571
+  },
+  "aligned_feature_selection": {
+    "bands_hz": [
+      [
+        24.0,
+        30.0
+      ],
+      [
+        8.0,
+        12.0
+      ],
+      [
+        12.0,
+        16.0
+      ],
+      [
+        20.0,
+        24.0
+      ]
+    ],
+    "per_band": [
+      {
+        "band_hz": [
+          8.0,
+          12.0
+        ],
+        "family": "tangent",
+        "validation_accuracy": 0.6938775510204082,
+        "C": 0.003,
+        "kernel": "linear",
+        "gamma": null,
+        "standardize": true
+      },
+      {
+        "band_hz": [
+          12.0,
+          16.0
+        ],
+        "family": "temporal_power",
+        "validation_accuracy": 0.6530612244897959,
+        "C": 1.0,
+        "kernel": "rbf",
+        "gamma": "scale",
+        "standardize": true
+      },
+      {
+        "band_hz": [
+          16.0,
+          20.0
+        ],
+        "family": "tangent",
+        "validation_accuracy": 0.5102040816326531,
+        "C": 0.03,
+        "kernel": "linear",
+        "gamma": null,
+        "standardize": false
+      },
+      {
+        "band_hz": [
+          20.0,
+          24.0
+        ],
+        "family": "temporal_power",
+        "validation_accuracy": 0.6326530612244898,
+        "C": 10.0,
+        "kernel": "rbf",
+        "gamma": "scale",
+        "standardize": true
+      },
+      {
+        "band_hz": [
+          24.0,
+          30.0
+        ],
+        "family": "temporal_power",
+        "validation_accuracy": 0.7142857142857143,
+        "C": 10.0,
+        "kernel": "rbf",
+        "gamma": "scale",
+        "standardize": true
+      }
+    ],
+    "selected_band_count": 4,
+    "validation_accuracy": 0.8571428571428571
+  },
+  "alignment_domains": {
+    "train": {
+      "domains": [
+        {
+          "domain": 0,
+          "n_trials": 227,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 247.21136647045148
+        }
+      ],
+      "n_domains": 1
+    },
+    "val": {
+      "domains": [
+        {
+          "domain": 0,
+          "n_trials": 49,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 235.58107805908003
+        }
+      ],
+      "n_domains": 1
+    },
+    "test": {
+      "domains": [
+        {
+          "domain": 0,
+          "n_trials": 49,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 242.13323696015723
+        }
+      ],
+      "n_domains": 1
+    }
+  },
+  "test": {
+    "n": 49,
+    "accuracy": 0.6530612244897959,
+    "accuracy_ci95_trial_bootstrap": [
+      0.5102040816326531,
+      0.7755102040816326
+    ],
+    "macro_f1": 0.6526867335562988,
+    "kappa": 0.5377358490566038,
+    "confusion_matrix": [
+      [
+        7,
+        4,
+        0,
+        0
+      ],
+      [
+        4,
+        8,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        9,
+        3
+      ],
+      [
+        1,
+        1,
+        3,
+        8
+      ]
+    ]
+  },
+  "prior_test_accuracy": 0.6530612244897959,
+  "delta_vs_prior_best_pp": 0.0,
+  "baseline": {
+    "best_model": "EEG-Conformer",
+    "best_accuracy": 0.5918367346938775,
+    "mean_accuracy": 0.36443148688046645,
+    "model_rows": 14
+  },
+  "delta_vs_15_model_best_pp": 6.122448979591832,
+  "runtime_seconds": 18.77
+}

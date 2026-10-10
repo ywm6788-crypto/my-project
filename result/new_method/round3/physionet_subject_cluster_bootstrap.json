@@ -1,0 +1,55 @@
+{
+  "comparison": "Final selected PhysioNet methods vs round-two methods on the same 22 held-out subjects",
+  "resamples": 20000,
+  "results": {
+    "physionet_task_1": {
+      "n_test_subjects": 22,
+      "test_trials_per_subject": 45,
+      "final_accuracy": 0.7090909090909091,
+      "round2_accuracy": 0.706060606060606,
+      "paired_delta_pp": 0.303030303030305,
+      "paired_subject_cluster_bootstrap_95ci_delta_pp": [
+        -2.1212121212121215,
+        2.727272727272727
+      ],
+      "bootstrap_probability_delta_le_zero": 0.4114
+    },
+    "physionet_task_2": {
+      "n_test_subjects": 22,
+      "test_trials_per_subject": 45,
+      "final_accuracy": 0.7535353535353535,
+      "round2_accuracy": 0.6181818181818182,
+      "paired_delta_pp": 13.535353535353533,
+      "paired_subject_cluster_bootstrap_95ci_delta_pp": [
+        9.494949494949495,
+        17.575757575757574
+      ],
+      "bootstrap_probability_delta_le_zero": 0.0
+    },
+    "physionet_task_3": {
+      "n_test_subjects": 22,
+      "test_trials_per_subject": 45,
+      "final_accuracy": 0.7565656565656566,
+      "round2_accuracy": 0.7373737373737373,
+      "paired_delta_pp": 1.9191919191919204,
+      "paired_subject_cluster_bootstrap_95ci_delta_pp": [
+        -1.8181818181818181,
+        5.555555555555555
+      ],
+      "bootstrap_probability_delta_le_zero": 0.16055
+    },
+    "physionet_task_4": {
+      "n_test_subjects": 22,
+      "test_trials_per_subject": 45,
+      "final_accuracy": 0.6515151515151515,
+      "round2_accuracy": 0.6101010101010101,
+      "paired_delta_pp": 4.141414141414135,
+      "paired_subject_cluster_bootstrap_95ci_delta_pp": [
+        1.0101010101010102,
+        7.474747474747474
+      ],
+      "bootstrap_probability_delta_le_zero": 0.00345
+    }
+  },
+  "note": "Resampling is by subject and paired. It does not establish significance against the historical 15-model best, whose predictions are unavailable. The fixed test set has been inspected in earlier experiment rounds."
+}

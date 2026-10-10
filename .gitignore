@@ -1,0 +1,14 @@
+# EEG 数据文件 - 全部排除
+test/
+eeg/
+
+# Python 垃圾
+__pycache__/
+*.pyc
+venv/
+env/
+.conda/
+
+# 系统文件
+.DS_Store
+Thumbs.db

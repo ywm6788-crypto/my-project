@@ -1,0 +1,422 @@
+{
+  "method": "subject-wise Riemannian alignment + filter-bank tangent-space classification",
+  "datasets": [
+    {
+      "dataset": "PhysioNet task 1",
+      "method": "subject-wise affine-invariant Riemannian alignment + filter-bank tangent-space LinearSVC",
+      "selected_alpha": 1.0,
+      "selected_C": 0.01,
+      "grouped_cv": {
+        "selected_group_cv_accuracy": 0.66595253417463,
+        "fold_accuracy": [
+          0.6928675400291121,
+          0.6491994177583698,
+          0.6656891495601173,
+          0.6568213783403657,
+          0.6651851851851852
+        ],
+        "candidate_mean_accuracy": {
+          "alpha=0.0,C=0.01": 0.6261953424139719,
+          "alpha=0.0,C=0.1": 0.6191817207236886,
+          "alpha=0.0,C=1": 0.618313009660074,
+          "alpha=0.0,C=10": 0.618313009660074,
+          "alpha=0.5,C=0.01": 0.6468274849360008,
+          "alpha=0.5,C=0.1": 0.6378010881437608,
+          "alpha=0.5,C=1": 0.6380943432757256,
+          "alpha=0.5,C=10": 0.6378032224605873,
+          "alpha=1.0,C=0.01": 0.66595253417463,
+          "alpha=1.0,C=0.1": 0.6654233748709812,
+          "alpha=1.0,C=1": 0.6648249034272669,
+          "alpha=1.0,C=10": 0.6645436094750867
+        },
+        "folds": 5,
+        "folding": "subject GroupKFold for PhysioNet; stratified trial folds because BCI subject IDs are absent"
+      },
+      "validation_accuracy_candidate": 0.7131313131313132,
+      "validation_accuracy_prior": 0.8262626262626263,
+      "validation_gain_pp": -11.313131313131311,
+      "validation_paired_standard_error_pp": 2.753706539214341,
+      "validation_acceptance_rule": "use candidate only when paired validation gain exceeds one standard error; otherwise retain prior",
+      "accepted_on_validation": false,
+      "prior_test_accuracy": 0.7181818181818181,
+      "test_accuracy": 0.7181818181818181,
+      "candidate_test_accuracy_diagnostic": 0.696969696969697,
+      "delta_vs_prior_pp": 0.0,
+      "test_macro_f1": 0.7181792302959623,
+      "test_kappa": 0.4363728375008673,
+      "test_confusion_matrix": [
+        [
+          357,
+          137
+        ],
+        [
+          142,
+          354
+        ]
+      ],
+      "baseline_15_model_best": 0.7191919191919192,
+      "delta_vs_15_model_best_pp": -0.10101010101010166,
+      "paired_test_uncertainty": {
+        "unit": "held-out subject, paired cluster bootstrap",
+        "subjects": 22,
+        "resamples": 20000,
+        "ci95_delta_pp": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_probability_delta_le_zero": 1.0
+      },
+      "n_test": 990,
+      "runtime_seconds": 57.63,
+      "test_time_note": "per-subject unlabeled covariance batches for PhysioNet; whole split batch for BCI because subject IDs were not retained"
+    },
+    {
+      "dataset": "PhysioNet task 2",
+      "method": "subject-wise affine-invariant Riemannian alignment + filter-bank tangent-space LinearSVC",
+      "selected_alpha": 1.0,
+      "selected_C": 0.01,
+      "grouped_cv": {
+        "selected_group_cv_accuracy": 0.6114867835343081,
+        "fold_accuracy": [
+          0.6084425036390102,
+          0.6145985401459854,
+          0.6329113924050633,
+          0.5777777777777777,
+          0.6237037037037036
+        ],
+        "candidate_mean_accuracy": {
+          "alpha=0.0,C=0.01": 0.6002108416808245,
+          "alpha=0.0,C=0.1": 0.5990129537809132,
+          "alpha=0.0,C=1": 0.5995703662041152,
+          "alpha=0.0,C=10": 0.5986901283019795,
+          "alpha=0.5,C=0.01": 0.607711713912045,
+          "alpha=0.5,C=0.1": 0.6056506163181007,
+          "alpha=0.5,C=1": 0.6041991395248518,
+          "alpha=0.5,C=10": 0.6041991395248518,
+          "alpha=1.0,C=0.01": 0.6114867835343081,
+          "alpha=1.0,C=0.1": 0.6068221782673338,
+          "alpha=1.0,C=1": 0.6064903759132232,
+          "alpha=1.0,C=10": 0.6070786430124392
+        },
+        "folds": 5,
+        "folding": "subject GroupKFold for PhysioNet; stratified trial folds because BCI subject IDs are absent"
+      },
+      "validation_accuracy_candidate": 0.6585858585858586,
+      "validation_accuracy_prior": 0.7696969696969697,
+      "validation_gain_pp": -11.111111111111112,
+      "validation_paired_standard_error_pp": 3.011388782903286,
+      "validation_acceptance_rule": "use candidate only when paired validation gain exceeds one standard error; otherwise retain prior",
+      "accepted_on_validation": false,
+      "prior_test_accuracy": 0.7535353535353535,
+      "test_accuracy": 0.7535353535353535,
+      "candidate_test_accuracy_diagnostic": 0.6282828282828283,
+      "delta_vs_prior_pp": 0.0,
+      "test_macro_f1": 0.7530475462192434,
+      "test_kappa": 0.5069016620328978,
+      "test_confusion_matrix": [
+        [
+          395,
+          102
+        ],
+        [
+          142,
+          351
+        ]
+      ],
+      "baseline_15_model_best": 0.7424242424242424,
+      "delta_vs_15_model_best_pp": 1.1111111111111072,
+      "paired_test_uncertainty": {
+        "unit": "held-out subject, paired cluster bootstrap",
+        "subjects": 22,
+        "resamples": 20000,
+        "ci95_delta_pp": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_probability_delta_le_zero": 1.0
+      },
+      "n_test": 990,
+      "runtime_seconds": 56.63,
+      "test_time_note": "per-subject unlabeled covariance batches for PhysioNet; whole split batch for BCI because subject IDs were not retained"
+    },
+    {
+      "dataset": "PhysioNet task 3",
+      "method": "subject-wise affine-invariant Riemannian alignment + filter-bank tangent-space LinearSVC",
+      "selected_alpha": 1.0,
+      "selected_C": 0.01,
+      "grouped_cv": {
+        "selected_group_cv_accuracy": 0.7390068667627129,
+        "fold_accuracy": [
+          0.7307132459970888,
+          0.7315634218289085,
+          0.7320169252468265,
+          0.7540740740740741,
+          0.7466666666666667
+        ],
+        "candidate_mean_accuracy": {
+          "alpha=0.0,C=0.01": 0.6744515279106877,
+          "alpha=0.0,C=0.1": 0.6718714253847061,
+          "alpha=0.0,C=1": 0.669493332691865,
+          "alpha=0.0,C=10": 0.6697896289881612,
+          "alpha=0.5,C=0.01": 0.7195429338159173,
+          "alpha=0.5,C=0.1": 0.7072679299117632,
+          "alpha=0.5,C=1": 0.7028688093558044,
+          "alpha=0.5,C=10": 0.7028688093558044,
+          "alpha=1.0,C=0.01": 0.7390068667627129,
+          "alpha=1.0,C=0.1": 0.729704944485696,
+          "alpha=1.0,C=1": 0.7270848375032688,
+          "alpha=1.0,C=10": 0.7273798227540063
+        },
+        "folds": 5,
+        "folding": "subject GroupKFold for PhysioNet; stratified trial folds because BCI subject IDs are absent"
+      },
+      "validation_accuracy_candidate": 0.7858585858585858,
+      "validation_accuracy_prior": 0.8181818181818182,
+      "validation_gain_pp": -3.232323232323233,
+      "validation_paired_standard_error_pp": 3.9906021628164488,
+      "validation_acceptance_rule": "use candidate only when paired validation gain exceeds one standard error; otherwise retain prior",
+      "accepted_on_validation": false,
+      "prior_test_accuracy": 0.7595959595959596,
+      "test_accuracy": 0.7595959595959596,
+      "candidate_test_accuracy_diagnostic": 0.7353535353535353,
+      "delta_vs_prior_pp": 0.0,
+      "test_macro_f1": 0.7594300323455418,
+      "test_kappa": 0.5192448949610695,
+      "test_confusion_matrix": [
+        [
+          363,
+          133
+        ],
+        [
+          105,
+          389
+        ]
+      ],
+      "baseline_15_model_best": 0.7575757575757576,
+      "delta_vs_15_model_best_pp": 0.20202020202020332,
+      "paired_test_uncertainty": {
+        "unit": "held-out subject, paired cluster bootstrap",
+        "subjects": 22,
+        "resamples": 20000,
+        "ci95_delta_pp": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_probability_delta_le_zero": 1.0
+      },
+      "n_test": 990,
+      "runtime_seconds": 56.17,
+      "test_time_note": "per-subject unlabeled covariance batches for PhysioNet; whole split batch for BCI because subject IDs were not retained"
+    },
+    {
+      "dataset": "PhysioNet task 4",
+      "method": "subject-wise affine-invariant Riemannian alignment + filter-bank tangent-space LinearSVC",
+      "selected_alpha": 1.0,
+      "selected_C": 0.01,
+      "grouped_cv": {
+        "selected_group_cv_accuracy": 0.6181756019465378,
+        "fold_accuracy": [
+          0.5851528384279476,
+          0.5793304221251819,
+          0.630098452883263,
+          0.677037037037037,
+          0.6192592592592593
+        ],
+        "candidate_mean_accuracy": {
+          "alpha=0.0,C=0.01": 0.5826750932016533,
+          "alpha=0.0,C=0.1": 0.5768334817599092,
+          "alpha=0.0,C=1": 0.5762755452373494,
+          "alpha=0.0,C=10": 0.5762755452373494,
+          "alpha=0.5,C=0.01": 0.6063511997985493,
+          "alpha=0.5,C=0.1": 0.6026043643555115,
+          "alpha=0.5,C=1": 0.6019962453194447,
+          "alpha=0.5,C=10": 0.6011177073928718,
+          "alpha=1.0,C=0.01": 0.6181756019465378,
+          "alpha=1.0,C=0.1": 0.613255504578704,
+          "alpha=1.0,C=1": 0.6129545569006074,
+          "alpha=1.0,C=10": 0.6129545569006074
+        },
+        "folds": 5,
+        "folding": "subject GroupKFold for PhysioNet; stratified trial folds because BCI subject IDs are absent"
+      },
+      "validation_accuracy_candidate": 0.593939393939394,
+      "validation_accuracy_prior": 0.6989898989898989,
+      "validation_gain_pp": -10.505050505050505,
+      "validation_paired_standard_error_pp": 2.875507611904337,
+      "validation_acceptance_rule": "use candidate only when paired validation gain exceeds one standard error; otherwise retain prior",
+      "accepted_on_validation": false,
+      "prior_test_accuracy": 0.6515151515151515,
+      "test_accuracy": 0.6515151515151515,
+      "candidate_test_accuracy_diagnostic": 0.6454545454545455,
+      "delta_vs_prior_pp": 0.0,
+      "test_macro_f1": 0.6512158683249274,
+      "test_kappa": 0.303030303030303,
+      "test_confusion_matrix": [
+        [
+          308,
+          187
+        ],
+        [
+          158,
+          337
+        ]
+      ],
+      "baseline_15_model_best": 0.6626262626262627,
+      "delta_vs_15_model_best_pp": -1.1111111111111183,
+      "paired_test_uncertainty": {
+        "unit": "held-out subject, paired cluster bootstrap",
+        "subjects": 22,
+        "resamples": 20000,
+        "ci95_delta_pp": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_probability_delta_le_zero": 1.0
+      },
+      "n_test": 990,
+      "runtime_seconds": 57.33,
+      "test_time_note": "per-subject unlabeled covariance batches for PhysioNet; whole split batch for BCI because subject IDs were not retained"
+    },
+    {
+      "dataset": "BCI IIIA",
+      "method": "subject-wise affine-invariant Riemannian alignment + filter-bank tangent-space LinearSVC",
+      "selected_alpha": 0.5,
+      "selected_C": 0.01,
+      "grouped_cv": {
+        "selected_group_cv_accuracy": 0.6521739130434783,
+        "fold_accuracy": [
+          0.6521739130434783,
+          0.6086956521739131,
+          0.6888888888888889,
+          0.6666666666666666,
+          0.6444444444444445
+        ],
+        "candidate_mean_accuracy": {
+          "alpha=0.0,C=0.01": 0.6431884057971013,
+          "alpha=0.0,C=0.1": 0.6431884057971013,
+          "alpha=0.0,C=1": 0.6431884057971013,
+          "alpha=0.0,C=10": 0.6431884057971013,
+          "alpha=0.5,C=0.01": 0.6521739130434783,
+          "alpha=0.5,C=0.1": 0.6520772946859903,
+          "alpha=0.5,C=1": 0.6520772946859903,
+          "alpha=0.5,C=10": 0.6520772946859903,
+          "alpha=1.0,C=0.01": 0.6478260869565218,
+          "alpha=1.0,C=0.1": 0.6433816425120773,
+          "alpha=1.0,C=1": 0.6433816425120773,
+          "alpha=1.0,C=10": 0.6433816425120773
+        },
+        "folds": 5,
+        "folding": "subject GroupKFold for PhysioNet; stratified trial folds because BCI subject IDs are absent"
+      },
+      "validation_accuracy_candidate": 0.6122448979591837,
+      "validation_accuracy_prior": 0.8775510204081632,
+      "validation_gain_pp": -26.53061224489796,
+      "validation_paired_standard_error_pp": 7.590446804224964,
+      "validation_acceptance_rule": "use candidate only when paired validation gain exceeds one standard error; otherwise retain prior",
+      "accepted_on_validation": false,
+      "prior_test_accuracy": 0.6530612244897959,
+      "test_accuracy": 0.6530612244897959,
+      "candidate_test_accuracy_diagnostic": 0.6530612244897959,
+      "delta_vs_prior_pp": 0.0,
+      "test_macro_f1": 0.6526867335562988,
+      "test_kappa": 0.5377358490566038,
+      "test_confusion_matrix": [
+        [
+          7,
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          9,
+          3
+        ],
+        [
+          1,
+          1,
+          3,
+          8
+        ]
+      ],
+      "baseline_15_model_best": 0.5918367346938775,
+      "delta_vs_15_model_best_pp": 6.122448979591832,
+      "paired_test_uncertainty": null,
+      "n_test": 49,
+      "runtime_seconds": 56.68,
+      "test_time_note": "per-subject unlabeled covariance batches for PhysioNet; whole split batch for BCI because subject IDs were not retained"
+    },
+    {
+      "dataset": "BCI IIIB",
+      "method": "subject-wise affine-invariant Riemannian alignment + filter-bank tangent-space LinearSVC",
+      "selected_alpha": 1.0,
+      "selected_C": 0.1,
+      "grouped_cv": {
+        "selected_group_cv_accuracy": 0.6581632653061223,
+        "fold_accuracy": [
+          0.6581632653061225,
+          0.6377551020408163,
+          0.6632653061224489,
+          0.6632653061224489,
+          0.6683673469387755
+        ],
+        "candidate_mean_accuracy": {
+          "alpha=0.0,C=0.01": 0.6510204081632652,
+          "alpha=0.0,C=0.1": 0.6459183673469387,
+          "alpha=0.0,C=1": 0.65,
+          "alpha=0.0,C=10": 0.6489795918367347,
+          "alpha=0.5,C=0.01": 0.6551020408163264,
+          "alpha=0.5,C=0.1": 0.6561224489795918,
+          "alpha=0.5,C=1": 0.6561224489795918,
+          "alpha=0.5,C=10": 0.6551020408163264,
+          "alpha=1.0,C=0.01": 0.6571428571428571,
+          "alpha=1.0,C=0.1": 0.6581632653061223,
+          "alpha=1.0,C=1": 0.6551020408163265,
+          "alpha=1.0,C=10": 0.6551020408163265
+        },
+        "folds": 5,
+        "folding": "subject GroupKFold for PhysioNet; stratified trial folds because BCI subject IDs are absent"
+      },
+      "validation_accuracy_candidate": 0.6285714285714286,
+      "validation_accuracy_prior": 0.819047619047619,
+      "validation_gain_pp": -19.047619047619047,
+      "validation_paired_standard_error_pp": 3.58412719266292,
+      "validation_acceptance_rule": "use candidate only when paired validation gain exceeds one standard error; otherwise retain prior",
+      "accepted_on_validation": false,
+      "prior_test_accuracy": 0.8428571428571429,
+      "test_accuracy": 0.8428571428571429,
+      "candidate_test_accuracy_diagnostic": 0.6190476190476191,
+      "delta_vs_prior_pp": 0.0,
+      "test_macro_f1": 0.8428250663400694,
+      "test_kappa": 0.6857142857142857,
+      "test_confusion_matrix": [
+        [
+          87,
+          18
+        ],
+        [
+          15,
+          90
+        ]
+      ],
+      "baseline_15_model_best": 0.8238095238095238,
+      "delta_vs_15_model_best_pp": 1.904761904761909,
+      "paired_test_uncertainty": null,
+      "n_test": 210,
+      "runtime_seconds": 0.54,
+      "test_time_note": "per-subject unlabeled covariance batches for PhysioNet; whole split batch for BCI because subject IDs were not retained"
+    }
+  ],
+  "mean_prior_accuracy": 0.7297911083625368,
+  "mean_final_accuracy": 0.7297911083625368,
+  "mean_delta_vs_prior_pp": 0.0,
+  "mean_delta_vs_15_model_best_pp": 1.3547034975606387,
+  "note": "All six fixed validation/test partitions were used in earlier rounds; results are exploratory and require an untouched external split for confirmation."
+}

@@ -1,0 +1,69 @@
+{
+  "dataset": "PhysioNet task 1",
+  "method": "subject-wise affine-invariant Riemannian alignment + filter-bank tangent-space LinearSVC",
+  "selected_alpha": 1.0,
+  "selected_C": 0.01,
+  "grouped_cv": {
+    "selected_group_cv_accuracy": 0.66595253417463,
+    "fold_accuracy": [
+      0.6928675400291121,
+      0.6491994177583698,
+      0.6656891495601173,
+      0.6568213783403657,
+      0.6651851851851852
+    ],
+    "candidate_mean_accuracy": {
+      "alpha=0.0,C=0.01": 0.6261953424139719,
+      "alpha=0.0,C=0.1": 0.6191817207236886,
+      "alpha=0.0,C=1": 0.618313009660074,
+      "alpha=0.0,C=10": 0.618313009660074,
+      "alpha=0.5,C=0.01": 0.6468274849360008,
+      "alpha=0.5,C=0.1": 0.6378010881437608,
+      "alpha=0.5,C=1": 0.6380943432757256,
+      "alpha=0.5,C=10": 0.6378032224605873,
+      "alpha=1.0,C=0.01": 0.66595253417463,
+      "alpha=1.0,C=0.1": 0.6654233748709812,
+      "alpha=1.0,C=1": 0.6648249034272669,
+      "alpha=1.0,C=10": 0.6645436094750867
+    },
+    "folds": 5,
+    "folding": "subject GroupKFold for PhysioNet; stratified trial folds because BCI subject IDs are absent"
+  },
+  "validation_accuracy_candidate": 0.7131313131313132,
+  "validation_accuracy_prior": 0.8262626262626263,
+  "validation_gain_pp": -11.313131313131311,
+  "validation_paired_standard_error_pp": 2.753706539214341,
+  "validation_acceptance_rule": "use candidate only when paired validation gain exceeds one standard error; otherwise retain prior",
+  "accepted_on_validation": false,
+  "prior_test_accuracy": 0.7181818181818181,
+  "test_accuracy": 0.7181818181818181,
+  "candidate_test_accuracy_diagnostic": 0.696969696969697,
+  "delta_vs_prior_pp": 0.0,
+  "test_macro_f1": 0.7181792302959623,
+  "test_kappa": 0.4363728375008673,
+  "test_confusion_matrix": [
+    [
+      357,
+      137
+    ],
+    [
+      142,
+      354
+    ]
+  ],
+  "baseline_15_model_best": 0.7191919191919192,
+  "delta_vs_15_model_best_pp": -0.10101010101010166,
+  "paired_test_uncertainty": {
+    "unit": "held-out subject, paired cluster bootstrap",
+    "subjects": 22,
+    "resamples": 20000,
+    "ci95_delta_pp": [
+      0.0,
+      0.0
+    ],
+    "bootstrap_probability_delta_le_zero": 1.0
+  },
+  "n_test": 990,
+  "runtime_seconds": 57.63,
+  "test_time_note": "per-subject unlabeled covariance batches for PhysioNet; whole split batch for BCI because subject IDs were not retained"
+}

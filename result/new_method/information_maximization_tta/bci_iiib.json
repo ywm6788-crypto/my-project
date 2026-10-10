@@ -1,0 +1,74 @@
+{
+  "dataset": "BCI IIIB",
+  "method": "T-TIME-inspired label-free information-maximization logit-bias adaptation",
+  "selected_preset": "no_adaptation",
+  "selected_hyperparameters": null,
+  "validation_accuracy_before": 0.819047619047619,
+  "validation_accuracy_after": 0.819047619047619,
+  "validation_gain_pp": 0.0,
+  "validation_gain_standard_error_pp": 0.0,
+  "selection_rule": "choose highest validation accuracy among presets whose paired gain exceeds one validation-domain standard error; otherwise keep prior model",
+  "validation_candidates": {
+    "no_adaptation": {
+      "accuracy": 0.819047619047619,
+      "gain_pp": 0.0,
+      "gain_se_pp": 0.0
+    },
+    "mi_weak": {
+      "accuracy": 0.819047619047619,
+      "gain_pp": 0.0,
+      "gain_se_pp": 0.0
+    },
+    "mi_mid": {
+      "accuracy": 0.819047619047619,
+      "gain_pp": 0.0,
+      "gain_se_pp": 0.0
+    },
+    "mi_small_shift": {
+      "accuracy": 0.819047619047619,
+      "gain_pp": 0.0,
+      "gain_se_pp": 0.0
+    },
+    "mi_standard": {
+      "accuracy": 0.819047619047619,
+      "gain_pp": 0.0,
+      "gain_se_pp": 0.0
+    },
+    "mi_full": {
+      "accuracy": 0.8142857142857143,
+      "gain_pp": -0.4761904761904762,
+      "gain_se_pp": 0.4761904761904762
+    }
+  },
+  "test": {
+    "n": 210,
+    "accuracy": 0.8428571428571429,
+    "accuracy_ci95_trial_bootstrap": [
+      0.7904761904761904,
+      0.8904761904761904
+    ],
+    "macro_f1": 0.8428250663400694,
+    "kappa": 0.6857142857142857,
+    "confusion_matrix": [
+      [
+        87,
+        18
+      ],
+      [
+        15,
+        90
+      ]
+    ]
+  },
+  "prior_test_accuracy": 0.8428571428571429,
+  "delta_vs_prior_pp": 0.0,
+  "paired_delta_uncertainty": null,
+  "baseline": {
+    "best_model": "EEG-Deformer",
+    "best_accuracy": 0.8238095238095238,
+    "mean_accuracy": 0.7149659863945578,
+    "model_rows": 14
+  },
+  "delta_vs_15_model_best_pp": 1.904761904761909,
+  "test_adaptation": null
+}

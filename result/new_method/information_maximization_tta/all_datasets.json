@@ -1,0 +1,1009 @@
+{
+  "method": "T-TIME-inspired information-maximization test-time adaptation",
+  "datasets": [
+    {
+      "dataset": "PhysioNet task 1",
+      "method": "T-TIME-inspired label-free information-maximization logit-bias adaptation",
+      "selected_preset": "mi_full",
+      "selected_hyperparameters": {
+        "beta": 1.0,
+        "ridge": 0.1,
+        "mix": 1.0
+      },
+      "validation_accuracy_before": 0.8161616161616162,
+      "validation_accuracy_after": 0.8262626262626263,
+      "validation_gain_pp": 1.0101010101010055,
+      "validation_gain_standard_error_pp": 0.96463324333845,
+      "selection_rule": "choose highest validation accuracy among presets whose paired gain exceeds one validation-domain standard error; otherwise keep prior model",
+      "validation_candidates": {
+        "no_adaptation": {
+          "accuracy": 0.8161616161616162,
+          "gain_pp": 0.0,
+          "gain_se_pp": 0.0
+        },
+        "mi_weak": {
+          "accuracy": 0.8161616161616162,
+          "gain_pp": 0.0,
+          "gain_se_pp": 0.0
+        },
+        "mi_mid": {
+          "accuracy": 0.8161616161616162,
+          "gain_pp": 0.0,
+          "gain_se_pp": 0.0
+        },
+        "mi_small_shift": {
+          "accuracy": 0.8202020202020202,
+          "gain_pp": 0.404040404040404,
+          "gain_se_pp": 0.503026246383383
+        },
+        "mi_standard": {
+          "accuracy": 0.8181818181818182,
+          "gain_pp": 0.202020202020202,
+          "gain_se_pp": 0.632423266363577
+        },
+        "mi_full": {
+          "accuracy": 0.8262626262626263,
+          "gain_pp": 1.0101010101010104,
+          "gain_se_pp": 0.96463324333845
+        }
+      },
+      "test": {
+        "n": 990,
+        "accuracy": 0.7181818181818181,
+        "accuracy_ci95_trial_bootstrap": [
+          0.6898989898989899,
+          0.7454545454545455
+        ],
+        "macro_f1": 0.7181792302959623,
+        "kappa": 0.4363728375008673,
+        "confusion_matrix": [
+          [
+            357,
+            137
+          ],
+          [
+            142,
+            354
+          ]
+        ]
+      },
+      "prior_test_accuracy": 0.7090909090909091,
+      "delta_vs_prior_pp": 0.9090909090909038,
+      "paired_delta_uncertainty": {
+        "unit": "held-out subject (paired cluster bootstrap)",
+        "n_subjects": 22,
+        "resamples": 20000,
+        "delta_pp": 0.9090909090909078,
+        "ci95_delta_pp": [
+          -0.10101010101010267,
+          1.9191919191919191
+        ],
+        "bootstrap_probability_delta_le_zero": 0.0499
+      },
+      "baseline": {
+        "best_model": "shallowconvnet",
+        "best_accuracy": 0.7191919191919192,
+        "mean_accuracy": 0.5655892255892258,
+        "model_rows": 15
+      },
+      "delta_vs_15_model_best_pp": -0.10101010101010166,
+      "test_adaptation": {
+        "n_domains": 22,
+        "domains": [
+          {
+            "domain": 1,
+            "n": 45,
+            "offsets": [
+              0.0581581799491445,
+              -0.0581581799491445
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.0765994171617596
+          },
+          {
+            "domain": 5,
+            "n": 45,
+            "offsets": [
+              0.02038939903450551,
+              -0.02038939903450551
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.02553769546587105
+          },
+          {
+            "domain": 11,
+            "n": 45,
+            "offsets": [
+              0.004704092771787845,
+              -0.004704092771787845
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.030646912752503235
+          },
+          {
+            "domain": 12,
+            "n": 45,
+            "offsets": [
+              -0.05757119410355586,
+              0.05757119410355586
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.030641969929267657
+          },
+          {
+            "domain": 23,
+            "n": 45,
+            "offsets": [
+              0.013751257782870747,
+              -0.013751257782870747
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.08507461568848873
+          },
+          {
+            "domain": 27,
+            "n": 45,
+            "offsets": [
+              0.047215223312127776,
+              -0.047215223312127776
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.052183220107413116
+          },
+          {
+            "domain": 37,
+            "n": 45,
+            "offsets": [
+              -0.09458476801670324,
+              0.09458476801670324
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.032993040604546525
+          },
+          {
+            "domain": 43,
+            "n": 45,
+            "offsets": [
+              -0.0013270589303083014,
+              0.0013270589303083014
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.037674602850611125
+          },
+          {
+            "domain": 45,
+            "n": 45,
+            "offsets": [
+              0.006387520274170319,
+              -0.006387520274170319
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.0524275488820949
+          },
+          {
+            "domain": 48,
+            "n": 45,
+            "offsets": [
+              -0.042275103325417715,
+              0.042275103325417715
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.10644473154984517
+          },
+          {
+            "domain": 57,
+            "n": 45,
+            "offsets": [
+              0.044676611326728864,
+              -0.044676611326728864
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.08096846088094563
+          },
+          {
+            "domain": 65,
+            "n": 45,
+            "offsets": [
+              0.01370355931526664,
+              -0.01370355931526664
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.041776222222220306
+          },
+          {
+            "domain": 69,
+            "n": 45,
+            "offsets": [
+              0.08201017131466447,
+              -0.08201017131466447
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.04550846958038859
+          },
+          {
+            "domain": 71,
+            "n": 45,
+            "offsets": [
+              -0.02477956707812711,
+              0.02477956707812711
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.05515156298513609
+          },
+          {
+            "domain": 73,
+            "n": 45,
+            "offsets": [
+              -0.013423192381835272,
+              0.013423192381835272
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.04430800104094789
+          },
+          {
+            "domain": 77,
+            "n": 45,
+            "offsets": [
+              0.026023296165193235,
+              -0.026023296165193235
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.036777702070568394
+          },
+          {
+            "domain": 79,
+            "n": 45,
+            "offsets": [
+              0.05430687694313188,
+              -0.05430687694313188
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.09072191358112142
+          },
+          {
+            "domain": 81,
+            "n": 45,
+            "offsets": [
+              -0.08012873186605377,
+              0.08012873186605377
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.0437370051909688
+          },
+          {
+            "domain": 82,
+            "n": 45,
+            "offsets": [
+              0.056648673166016565,
+              -0.056648673166016565
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.09914026837507081
+          },
+          {
+            "domain": 85,
+            "n": 45,
+            "offsets": [
+              0.02103273657695926,
+              -0.02103273657695926
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.04225441393518616
+          },
+          {
+            "domain": 91,
+            "n": 45,
+            "offsets": [
+              -0.008659525898029416,
+              0.008659525898029416
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.07559130452628988
+          },
+          {
+            "domain": 97,
+            "n": 45,
+            "offsets": [
+              0.005367460745327993,
+              -0.005367460745327993
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.028535596000580997
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "PhysioNet task 2",
+      "method": "T-TIME-inspired label-free information-maximization logit-bias adaptation",
+      "selected_preset": "no_adaptation",
+      "selected_hyperparameters": null,
+      "validation_accuracy_before": 0.7696969696969697,
+      "validation_accuracy_after": 0.7696969696969697,
+      "validation_gain_pp": 0.0,
+      "validation_gain_standard_error_pp": 0.0,
+      "selection_rule": "choose highest validation accuracy among presets whose paired gain exceeds one validation-domain standard error; otherwise keep prior model",
+      "validation_candidates": {
+        "no_adaptation": {
+          "accuracy": 0.7696969696969697,
+          "gain_pp": 0.0,
+          "gain_se_pp": 0.0
+        },
+        "mi_weak": {
+          "accuracy": 0.7676767676767676,
+          "gain_pp": -0.20202020202020202,
+          "gain_se_pp": 0.20202020202020202
+        },
+        "mi_mid": {
+          "accuracy": 0.7717171717171717,
+          "gain_pp": 0.20202020202020202,
+          "gain_se_pp": 0.20202020202020202
+        },
+        "mi_small_shift": {
+          "accuracy": 0.7717171717171717,
+          "gain_pp": 0.20202020202020202,
+          "gain_se_pp": 0.20202020202020202
+        },
+        "mi_standard": {
+          "accuracy": 0.7676767676767676,
+          "gain_pp": -0.20202020202020202,
+          "gain_se_pp": 0.46945252681302024
+        },
+        "mi_full": {
+          "accuracy": 0.7696969696969697,
+          "gain_pp": 3.154042683594195e-17,
+          "gain_se_pp": 0.6700252101728081
+        }
+      },
+      "test": {
+        "n": 990,
+        "accuracy": 0.7535353535353535,
+        "accuracy_ci95_trial_bootstrap": [
+          0.7262626262626263,
+          0.7797979797979798
+        ],
+        "macro_f1": 0.7530475462192434,
+        "kappa": 0.5069016620328978,
+        "confusion_matrix": [
+          [
+            395,
+            102
+          ],
+          [
+            142,
+            351
+          ]
+        ]
+      },
+      "prior_test_accuracy": 0.7535353535353535,
+      "delta_vs_prior_pp": 0.0,
+      "paired_delta_uncertainty": {
+        "unit": "held-out subject (paired cluster bootstrap)",
+        "n_subjects": 22,
+        "resamples": 20000,
+        "delta_pp": 0.0,
+        "ci95_delta_pp": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_probability_delta_le_zero": 1.0
+      },
+      "baseline": {
+        "best_model": "shallowconvnet",
+        "best_accuracy": 0.7424242424242424,
+        "mean_accuracy": 0.5641077441077441,
+        "model_rows": 15
+      },
+      "delta_vs_15_model_best_pp": 1.1111111111111072,
+      "test_adaptation": null
+    },
+    {
+      "dataset": "PhysioNet task 3",
+      "method": "T-TIME-inspired label-free information-maximization logit-bias adaptation",
+      "selected_preset": "mi_small_shift",
+      "selected_hyperparameters": {
+        "beta": 1.0,
+        "ridge": 0.1,
+        "mix": 0.25
+      },
+      "validation_accuracy_before": 0.8141414141414142,
+      "validation_accuracy_after": 0.8181818181818182,
+      "validation_gain_pp": 0.40404040404040664,
+      "validation_gain_standard_error_pp": 0.2710385427272472,
+      "selection_rule": "choose highest validation accuracy among presets whose paired gain exceeds one validation-domain standard error; otherwise keep prior model",
+      "validation_candidates": {
+        "no_adaptation": {
+          "accuracy": 0.8141414141414142,
+          "gain_pp": 0.0,
+          "gain_se_pp": 0.0
+        },
+        "mi_weak": {
+          "accuracy": 0.8121212121212121,
+          "gain_pp": -0.20202020202020202,
+          "gain_se_pp": 0.3613847236363297
+        },
+        "mi_mid": {
+          "accuracy": 0.8161616161616162,
+          "gain_pp": 0.20202020202020202,
+          "gain_se_pp": 0.20202020202020202
+        },
+        "mi_small_shift": {
+          "accuracy": 0.8181818181818182,
+          "gain_pp": 0.40404040404040403,
+          "gain_se_pp": 0.2710385427272472
+        },
+        "mi_standard": {
+          "accuracy": 0.8161616161616162,
+          "gain_pp": 0.20202020202020202,
+          "gain_se_pp": 0.3613847236363296
+        },
+        "mi_full": {
+          "accuracy": 0.8181818181818182,
+          "gain_pp": 0.40404040404040403,
+          "gain_se_pp": 0.5030262463833831
+        }
+      },
+      "test": {
+        "n": 990,
+        "accuracy": 0.7595959595959596,
+        "accuracy_ci95_trial_bootstrap": [
+          0.7313131313131314,
+          0.7858585858585858
+        ],
+        "macro_f1": 0.7594300323455418,
+        "kappa": 0.5192448949610695,
+        "confusion_matrix": [
+          [
+            363,
+            133
+          ],
+          [
+            105,
+            389
+          ]
+        ]
+      },
+      "prior_test_accuracy": 0.7565656565656566,
+      "delta_vs_prior_pp": 0.303030303030305,
+      "paired_delta_uncertainty": {
+        "unit": "held-out subject (paired cluster bootstrap)",
+        "n_subjects": 22,
+        "resamples": 20000,
+        "delta_pp": 0.3030303030303025,
+        "ci95_delta_pp": [
+          0.0,
+          0.6060606060606059
+        ],
+        "bootstrap_probability_delta_le_zero": 0.04285
+      },
+      "baseline": {
+        "best_model": "shallowconvnet",
+        "best_accuracy": 0.7575757575757576,
+        "mean_accuracy": 0.5544107744107744,
+        "model_rows": 15
+      },
+      "delta_vs_15_model_best_pp": 0.20202020202020332,
+      "test_adaptation": {
+        "n_domains": 22,
+        "domains": [
+          {
+            "domain": 1,
+            "n": 45,
+            "offsets": [
+              -0.10257951544460392,
+              0.10257951544460392
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.18603836976084215
+          },
+          {
+            "domain": 5,
+            "n": 45,
+            "offsets": [
+              -0.1498877924527214,
+              0.1498877924527214
+            ],
+            "optimizer_converged": true,
+            "iterations": 4,
+            "objective": -0.3443658985350986
+          },
+          {
+            "domain": 11,
+            "n": 45,
+            "offsets": [
+              0.001129442294130627,
+              -0.001129442294130627
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.07919229952932397
+          },
+          {
+            "domain": 12,
+            "n": 45,
+            "offsets": [
+              0.02251549956749866,
+              -0.02251549956749866
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.1110659323686646
+          },
+          {
+            "domain": 23,
+            "n": 45,
+            "offsets": [
+              -0.036671384642138975,
+              0.036671384642138975
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.24196794698115842
+          },
+          {
+            "domain": 27,
+            "n": 45,
+            "offsets": [
+              0.11877300324067279,
+              -0.11877300324067279
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.14664953625832383
+          },
+          {
+            "domain": 37,
+            "n": 45,
+            "offsets": [
+              -0.019098279061849573,
+              0.019098279061849573
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.05690813115912587
+          },
+          {
+            "domain": 43,
+            "n": 45,
+            "offsets": [
+              -0.1890539869103644,
+              0.1890539869103644
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.2643317256057139
+          },
+          {
+            "domain": 45,
+            "n": 45,
+            "offsets": [
+              0.13292648785378883,
+              -0.13292648785378883
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.19440246773066655
+          },
+          {
+            "domain": 48,
+            "n": 45,
+            "offsets": [
+              -0.13828244165882397,
+              0.13828244165882397
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.29647339919773524
+          },
+          {
+            "domain": 57,
+            "n": 45,
+            "offsets": [
+              -0.1700851045622756,
+              0.1700851045622756
+            ],
+            "optimizer_converged": true,
+            "iterations": 4,
+            "objective": -0.28407355369041004
+          },
+          {
+            "domain": 65,
+            "n": 45,
+            "offsets": [
+              -0.024057158525015138,
+              0.024057158525015138
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.12767499943896038
+          },
+          {
+            "domain": 69,
+            "n": 45,
+            "offsets": [
+              0.1707112839910014,
+              -0.1707112839910014
+            ],
+            "optimizer_converged": true,
+            "iterations": 4,
+            "objective": -0.1517976218506138
+          },
+          {
+            "domain": 71,
+            "n": 45,
+            "offsets": [
+              0.027301916310847357,
+              -0.027301916310847357
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.25462770181888544
+          },
+          {
+            "domain": 73,
+            "n": 45,
+            "offsets": [
+              0.11827908383397072,
+              -0.11827908383397072
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.20825433067899182
+          },
+          {
+            "domain": 77,
+            "n": 45,
+            "offsets": [
+              -0.07430516879860544,
+              0.07430516879860544
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.130929802870323
+          },
+          {
+            "domain": 79,
+            "n": 45,
+            "offsets": [
+              -0.09311777003526352,
+              0.09311777003526352
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.2815346214078686
+          },
+          {
+            "domain": 81,
+            "n": 45,
+            "offsets": [
+              0.038301538302203376,
+              -0.038301538302203376
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.1766267594943814
+          },
+          {
+            "domain": 82,
+            "n": 45,
+            "offsets": [
+              0.18083741850564353,
+              -0.18083741850564353
+            ],
+            "optimizer_converged": true,
+            "iterations": 4,
+            "objective": -0.1808443948334839
+          },
+          {
+            "domain": 85,
+            "n": 45,
+            "offsets": [
+              -0.056317132381616807,
+              0.056317132381616807
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.24346431601977023
+          },
+          {
+            "domain": 91,
+            "n": 45,
+            "offsets": [
+              0.031330833573768944,
+              -0.031330833573768944
+            ],
+            "optimizer_converged": true,
+            "iterations": 2,
+            "objective": -0.1827308726955804
+          },
+          {
+            "domain": 97,
+            "n": 45,
+            "offsets": [
+              -0.06336677587513968,
+              0.06336677587513968
+            ],
+            "optimizer_converged": true,
+            "iterations": 3,
+            "objective": -0.1433471182827491
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "PhysioNet task 4",
+      "method": "T-TIME-inspired label-free information-maximization logit-bias adaptation",
+      "selected_preset": "no_adaptation",
+      "selected_hyperparameters": null,
+      "validation_accuracy_before": 0.6989898989898989,
+      "validation_accuracy_after": 0.6989898989898989,
+      "validation_gain_pp": 0.0,
+      "validation_gain_standard_error_pp": 0.0,
+      "selection_rule": "choose highest validation accuracy among presets whose paired gain exceeds one validation-domain standard error; otherwise keep prior model",
+      "validation_candidates": {
+        "no_adaptation": {
+          "accuracy": 0.6989898989898989,
+          "gain_pp": 0.0,
+          "gain_se_pp": 0.0
+        },
+        "mi_weak": {
+          "accuracy": 0.6888888888888889,
+          "gain_pp": -1.0101010101010102,
+          "gain_se_pp": 0.4606769394339951
+        },
+        "mi_mid": {
+          "accuracy": 0.6989898989898989,
+          "gain_pp": 0.0,
+          "gain_se_pp": 0.0
+        },
+        "mi_small_shift": {
+          "accuracy": 0.6989898989898989,
+          "gain_pp": 0.0,
+          "gain_se_pp": 0.0
+        },
+        "mi_standard": {
+          "accuracy": 0.694949494949495,
+          "gain_pp": -0.40404040404040403,
+          "gain_se_pp": 0.2710385427272472
+        },
+        "mi_full": {
+          "accuracy": 0.692929292929293,
+          "gain_pp": -0.6060606060606061,
+          "gain_se_pp": 0.7979158649750101
+        }
+      },
+      "test": {
+        "n": 990,
+        "accuracy": 0.6515151515151515,
+        "accuracy_ci95_trial_bootstrap": [
+          0.6212121212121212,
+          0.6808080808080809
+        ],
+        "macro_f1": 0.6512158683249274,
+        "kappa": 0.303030303030303,
+        "confusion_matrix": [
+          [
+            308,
+            187
+          ],
+          [
+            158,
+            337
+          ]
+        ]
+      },
+      "prior_test_accuracy": 0.6515151515151515,
+      "delta_vs_prior_pp": 0.0,
+      "paired_delta_uncertainty": {
+        "unit": "held-out subject (paired cluster bootstrap)",
+        "n_subjects": 22,
+        "resamples": 20000,
+        "delta_pp": 0.0,
+        "ci95_delta_pp": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_probability_delta_le_zero": 1.0
+      },
+      "baseline": {
+        "best_model": "shallowconvnet",
+        "best_accuracy": 0.6626262626262627,
+        "mean_accuracy": 0.5505050505050505,
+        "model_rows": 15
+      },
+      "delta_vs_15_model_best_pp": -1.1111111111111183,
+      "test_adaptation": null
+    },
+    {
+      "dataset": "BCI IIIA",
+      "method": "T-TIME-inspired label-free information-maximization logit-bias adaptation",
+      "selected_preset": "no_adaptation",
+      "selected_hyperparameters": null,
+      "validation_accuracy_before": 0.8775510204081632,
+      "validation_accuracy_after": 0.8775510204081632,
+      "validation_gain_pp": 0.0,
+      "validation_gain_standard_error_pp": 0.0,
+      "selection_rule": "choose highest validation accuracy among presets whose paired gain exceeds one validation-domain standard error; otherwise keep prior model",
+      "validation_candidates": {
+        "no_adaptation": {
+          "accuracy": 0.8775510204081632,
+          "gain_pp": 0.0,
+          "gain_se_pp": 0.0
+        },
+        "mi_weak": {
+          "accuracy": 0.8775510204081632,
+          "gain_pp": 0.0,
+          "gain_se_pp": 0.0
+        },
+        "mi_mid": {
+          "accuracy": 0.8775510204081632,
+          "gain_pp": 0.0,
+          "gain_se_pp": 0.0
+        },
+        "mi_small_shift": {
+          "accuracy": 0.8571428571428571,
+          "gain_pp": -2.0408163265306123,
+          "gain_se_pp": 2.0408163265306123
+        },
+        "mi_standard": {
+          "accuracy": 0.8571428571428571,
+          "gain_pp": -2.0408163265306123,
+          "gain_se_pp": 2.0408163265306123
+        },
+        "mi_full": {
+          "accuracy": 0.8571428571428571,
+          "gain_pp": -2.0408163265306123,
+          "gain_se_pp": 2.0408163265306123
+        }
+      },
+      "test": {
+        "n": 49,
+        "accuracy": 0.6530612244897959,
+        "accuracy_ci95_trial_bootstrap": [
+          0.5102040816326531,
+          0.7755102040816326
+        ],
+        "macro_f1": 0.6526867335562988,
+        "kappa": 0.5377358490566038,
+        "confusion_matrix": [
+          [
+            7,
+            4,
+            0,
+            0
+          ],
+          [
+            4,
+            8,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            9,
+            3
+          ],
+          [
+            1,
+            1,
+            3,
+            8
+          ]
+        ]
+      },
+      "prior_test_accuracy": 0.6530612244897959,
+      "delta_vs_prior_pp": 0.0,
+      "paired_delta_uncertainty": null,
+      "baseline": {
+        "best_model": "EEG-Conformer",
+        "best_accuracy": 0.5918367346938775,
+        "mean_accuracy": 0.36443148688046645,
+        "model_rows": 14
+      },
+      "delta_vs_15_model_best_pp": 6.122448979591832,
+      "test_adaptation": null
+    },
+    {
+      "dataset": "BCI IIIB",
+      "method": "T-TIME-inspired label-free information-maximization logit-bias adaptation",
+      "selected_preset": "no_adaptation",
+      "selected_hyperparameters": null,
+      "validation_accuracy_before": 0.819047619047619,
+      "validation_accuracy_after": 0.819047619047619,
+      "validation_gain_pp": 0.0,
+      "validation_gain_standard_error_pp": 0.0,
+      "selection_rule": "choose highest validation accuracy among presets whose paired gain exceeds one validation-domain standard error; otherwise keep prior model",
+      "validation_candidates": {
+        "no_adaptation": {
+          "accuracy": 0.819047619047619,
+          "gain_pp": 0.0,
+          "gain_se_pp": 0.0
+        },
+        "mi_weak": {
+          "accuracy": 0.819047619047619,
+          "gain_pp": 0.0,
+          "gain_se_pp": 0.0
+        },
+        "mi_mid": {
+          "accuracy": 0.819047619047619,
+          "gain_pp": 0.0,
+          "gain_se_pp": 0.0
+        },
+        "mi_small_shift": {
+          "accuracy": 0.819047619047619,
+          "gain_pp": 0.0,
+          "gain_se_pp": 0.0
+        },
+        "mi_standard": {
+          "accuracy": 0.819047619047619,
+          "gain_pp": 0.0,
+          "gain_se_pp": 0.0
+        },
+        "mi_full": {
+          "accuracy": 0.8142857142857143,
+          "gain_pp": -0.4761904761904762,
+          "gain_se_pp": 0.4761904761904762
+        }
+      },
+      "test": {
+        "n": 210,
+        "accuracy": 0.8428571428571429,
+        "accuracy_ci95_trial_bootstrap": [
+          0.7904761904761904,
+          0.8904761904761904
+        ],
+        "macro_f1": 0.8428250663400694,
+        "kappa": 0.6857142857142857,
+        "confusion_matrix": [
+          [
+            87,
+            18
+          ],
+          [
+            15,
+            90
+          ]
+        ]
+      },
+      "prior_test_accuracy": 0.8428571428571429,
+      "delta_vs_prior_pp": 0.0,
+      "paired_delta_uncertainty": null,
+      "baseline": {
+        "best_model": "EEG-Deformer",
+        "best_accuracy": 0.8238095238095238,
+        "mean_accuracy": 0.7149659863945578,
+        "model_rows": 14
+      },
+      "delta_vs_15_model_best_pp": 1.904761904761909,
+      "test_adaptation": null
+    }
+  ],
+  "mean_prior_accuracy": 0.7277709063423349,
+  "mean_final_accuracy": 0.7297911083625368,
+  "mean_delta_vs_prior_pp": 0.20202020202020146,
+  "note": "Test-time adaptation uses only unlabeled target probabilities, per subject for PhysioNet and per whole provided split for BCI. All test sets were inspected in prior work; exploratory only."
+}

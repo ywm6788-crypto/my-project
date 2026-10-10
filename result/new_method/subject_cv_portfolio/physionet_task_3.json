@@ -1,0 +1,159 @@
+{
+  "dataset": "PhysioNet task 3",
+  "method": "5-fold subject-CV temporal FBCSP, validation-selected with covariance-aligned portfolio",
+  "selected_by_validation": "previous_portfolio",
+  "validation_accuracy": 0.8141414141414142,
+  "validation_candidate_accuracy": {
+    "previous_portfolio": 0.8141414141414142,
+    "broad_mu_beta_phases_csp2": 0.7151515151515152,
+    "previous_portfolio + broad_mu_beta_phases_csp2; csp_weight=0.25": 0.804040404040404,
+    "previous_portfolio + broad_mu_beta_phases_csp2; csp_weight=0.50": 0.7919191919191919,
+    "previous_portfolio + broad_mu_beta_phases_csp2; csp_weight=0.75": 0.7494949494949495,
+    "narrow_mu_beta_phases_csp2": 0.701010101010101,
+    "previous_portfolio + narrow_mu_beta_phases_csp2; csp_weight=0.25": 0.802020202020202,
+    "previous_portfolio + narrow_mu_beta_phases_csp2; csp_weight=0.50": 0.7898989898989899,
+    "previous_portfolio + narrow_mu_beta_phases_csp2; csp_weight=0.75": 0.7393939393939394,
+    "classic_phases_csp2": 0.701010101010101,
+    "previous_portfolio + classic_phases_csp2; csp_weight=0.25": 0.806060606060606,
+    "previous_portfolio + classic_phases_csp2; csp_weight=0.50": 0.7777777777777778,
+    "previous_portfolio + classic_phases_csp2; csp_weight=0.75": 0.7333333333333333
+  },
+  "grouped_cv": {
+    "grouped_cv_folds": 5,
+    "ranked_configs": [
+      {
+        "name": "broad_mu_beta_phases_csp2",
+        "components": 2,
+        "c": 0.001,
+        "cv_mean_accuracy": 0.681050440610762,
+        "cv_subject_macro_accuracy": 0.6809322612085771,
+        "cv_fold_accuracy": [
+          0.7001455604075691,
+          0.6622418879056047,
+          0.6784203102961918,
+          0.6651851851851852,
+          0.6992592592592592
+        ]
+      },
+      {
+        "name": "narrow_mu_beta_phases_csp2",
+        "components": 2,
+        "c": 0.001,
+        "cv_mean_accuracy": 0.6786685849270365,
+        "cv_subject_macro_accuracy": 0.6783882008943929,
+        "cv_fold_accuracy": [
+          0.6797671033478894,
+          0.6607669616519174,
+          0.68688293370945,
+          0.6637037037037037,
+          0.7022222222222222
+        ]
+      },
+      {
+        "name": "classic_phases_csp2",
+        "components": 2,
+        "c": 0.001,
+        "cv_mean_accuracy": 0.6708274422068691,
+        "cv_subject_macro_accuracy": 0.6705077112716433,
+        "cv_fold_accuracy": [
+          0.6739446870451238,
+          0.6651917404129793,
+          0.6727785613540197,
+          0.6622222222222223,
+          0.68
+        ]
+      },
+      {
+        "name": "classic_phases_plus_full_csp2",
+        "components": 2,
+        "c": 0.001,
+        "cv_mean_accuracy": 0.6705816387314888,
+        "cv_subject_macro_accuracy": 0.6699899667469327,
+        "cv_fold_accuracy": [
+          0.6739446870451238,
+          0.6563421828908554,
+          0.6685472496473907,
+          0.674074074074074,
+          0.68
+        ]
+      },
+      {
+        "name": "classic_phases_csp3",
+        "components": 3,
+        "c": 0.001,
+        "cv_mean_accuracy": 0.659638298945741,
+        "cv_subject_macro_accuracy": 0.6602123896342162,
+        "cv_fold_accuracy": [
+          0.6550218340611353,
+          0.6460176991150443,
+          0.6741889985895627,
+          0.6474074074074074,
+          0.6755555555555556
+        ]
+      },
+      {
+        "name": "narrow_mu_beta_full_csp2",
+        "components": 2,
+        "c": 0.1,
+        "cv_mean_accuracy": 0.6586597468741995,
+        "cv_subject_macro_accuracy": 0.6579967893590184,
+        "cv_fold_accuracy": [
+          0.6652110625909753,
+          0.644542772861357,
+          0.6502115655853314,
+          0.6696296296296296,
+          0.6637037037037037
+        ]
+      },
+      {
+        "name": "classic_full_csp2",
+        "components": 2,
+        "c": 0.01,
+        "cv_mean_accuracy": 0.6480476894083725,
+        "cv_subject_macro_accuracy": 0.6480597695218439,
+        "cv_fold_accuracy": [
+          0.6375545851528385,
+          0.6297935103244838,
+          0.6558533145275035,
+          0.6548148148148148,
+          0.6622222222222223
+        ]
+      }
+    ],
+    "shortlist_validation_accuracy": {
+      "broad_mu_beta_phases_csp2": 0.7151515151515152,
+      "narrow_mu_beta_phases_csp2": 0.701010101010101,
+      "classic_phases_csp2": 0.701010101010101
+    }
+  },
+  "prior_portfolio_test_accuracy": 0.7565656565656566,
+  "test": {
+    "n": 990,
+    "accuracy": 0.7565656565656566,
+    "accuracy_ci95_trial_bootstrap": [
+      0.7292929292929293,
+      0.7828282828282829
+    ],
+    "macro_f1": 0.7563844549205562,
+    "kappa": 0.5131869432326885,
+    "confusion_matrix": [
+      [
+        361,
+        135
+      ],
+      [
+        106,
+        388
+      ]
+    ]
+  },
+  "delta_vs_prior_portfolio_pp": 0.0,
+  "baseline": {
+    "best_model": "shallowconvnet",
+    "best_accuracy": 0.7575757575757576,
+    "mean_accuracy": 0.5544107744107744,
+    "model_rows": 15
+  },
+  "delta_vs_best_baseline_pp": -0.10101010101010166,
+  "runtime_seconds": 165.84
+}

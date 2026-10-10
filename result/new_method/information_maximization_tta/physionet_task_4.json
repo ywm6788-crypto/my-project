@@ -1,0 +1,84 @@
+{
+  "dataset": "PhysioNet task 4",
+  "method": "T-TIME-inspired label-free information-maximization logit-bias adaptation",
+  "selected_preset": "no_adaptation",
+  "selected_hyperparameters": null,
+  "validation_accuracy_before": 0.6989898989898989,
+  "validation_accuracy_after": 0.6989898989898989,
+  "validation_gain_pp": 0.0,
+  "validation_gain_standard_error_pp": 0.0,
+  "selection_rule": "choose highest validation accuracy among presets whose paired gain exceeds one validation-domain standard error; otherwise keep prior model",
+  "validation_candidates": {
+    "no_adaptation": {
+      "accuracy": 0.6989898989898989,
+      "gain_pp": 0.0,
+      "gain_se_pp": 0.0
+    },
+    "mi_weak": {
+      "accuracy": 0.6888888888888889,
+      "gain_pp": -1.0101010101010102,
+      "gain_se_pp": 0.4606769394339951
+    },
+    "mi_mid": {
+      "accuracy": 0.6989898989898989,
+      "gain_pp": 0.0,
+      "gain_se_pp": 0.0
+    },
+    "mi_small_shift": {
+      "accuracy": 0.6989898989898989,
+      "gain_pp": 0.0,
+      "gain_se_pp": 0.0
+    },
+    "mi_standard": {
+      "accuracy": 0.694949494949495,
+      "gain_pp": -0.40404040404040403,
+      "gain_se_pp": 0.2710385427272472
+    },
+    "mi_full": {
+      "accuracy": 0.692929292929293,
+      "gain_pp": -0.6060606060606061,
+      "gain_se_pp": 0.7979158649750101
+    }
+  },
+  "test": {
+    "n": 990,
+    "accuracy": 0.6515151515151515,
+    "accuracy_ci95_trial_bootstrap": [
+      0.6212121212121212,
+      0.6808080808080809
+    ],
+    "macro_f1": 0.6512158683249274,
+    "kappa": 0.303030303030303,
+    "confusion_matrix": [
+      [
+        308,
+        187
+      ],
+      [
+        158,
+        337
+      ]
+    ]
+  },
+  "prior_test_accuracy": 0.6515151515151515,
+  "delta_vs_prior_pp": 0.0,
+  "paired_delta_uncertainty": {
+    "unit": "held-out subject (paired cluster bootstrap)",
+    "n_subjects": 22,
+    "resamples": 20000,
+    "delta_pp": 0.0,
+    "ci95_delta_pp": [
+      0.0,
+      0.0
+    ],
+    "bootstrap_probability_delta_le_zero": 1.0
+  },
+  "baseline": {
+    "best_model": "shallowconvnet",
+    "best_accuracy": 0.6626262626262627,
+    "mean_accuracy": 0.5505050505050505,
+    "model_rows": 15
+  },
+  "delta_vs_15_model_best_pp": -1.1111111111111183,
+  "test_adaptation": null
+}

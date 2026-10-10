@@ -1,0 +1,90 @@
+{
+  "dataset": "BCI IIIA",
+  "method": "T-TIME-inspired label-free information-maximization logit-bias adaptation",
+  "selected_preset": "no_adaptation",
+  "selected_hyperparameters": null,
+  "validation_accuracy_before": 0.8775510204081632,
+  "validation_accuracy_after": 0.8775510204081632,
+  "validation_gain_pp": 0.0,
+  "validation_gain_standard_error_pp": 0.0,
+  "selection_rule": "choose highest validation accuracy among presets whose paired gain exceeds one validation-domain standard error; otherwise keep prior model",
+  "validation_candidates": {
+    "no_adaptation": {
+      "accuracy": 0.8775510204081632,
+      "gain_pp": 0.0,
+      "gain_se_pp": 0.0
+    },
+    "mi_weak": {
+      "accuracy": 0.8775510204081632,
+      "gain_pp": 0.0,
+      "gain_se_pp": 0.0
+    },
+    "mi_mid": {
+      "accuracy": 0.8775510204081632,
+      "gain_pp": 0.0,
+      "gain_se_pp": 0.0
+    },
+    "mi_small_shift": {
+      "accuracy": 0.8571428571428571,
+      "gain_pp": -2.0408163265306123,
+      "gain_se_pp": 2.0408163265306123
+    },
+    "mi_standard": {
+      "accuracy": 0.8571428571428571,
+      "gain_pp": -2.0408163265306123,
+      "gain_se_pp": 2.0408163265306123
+    },
+    "mi_full": {
+      "accuracy": 0.8571428571428571,
+      "gain_pp": -2.0408163265306123,
+      "gain_se_pp": 2.0408163265306123
+    }
+  },
+  "test": {
+    "n": 49,
+    "accuracy": 0.6530612244897959,
+    "accuracy_ci95_trial_bootstrap": [
+      0.5102040816326531,
+      0.7755102040816326
+    ],
+    "macro_f1": 0.6526867335562988,
+    "kappa": 0.5377358490566038,
+    "confusion_matrix": [
+      [
+        7,
+        4,
+        0,
+        0
+      ],
+      [
+        4,
+        8,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        9,
+        3
+      ],
+      [
+        1,
+        1,
+        3,
+        8
+      ]
+    ]
+  },
+  "prior_test_accuracy": 0.6530612244897959,
+  "delta_vs_prior_pp": 0.0,
+  "paired_delta_uncertainty": null,
+  "baseline": {
+    "best_model": "EEG-Conformer",
+    "best_accuracy": 0.5918367346938775,
+    "mean_accuracy": 0.36443148688046645,
+    "model_rows": 14
+  },
+  "delta_vs_15_model_best_pp": 6.122448979591832,
+  "test_adaptation": null
+}

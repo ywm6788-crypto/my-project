@@ -1,0 +1,7 @@
+﻿dataset,alpha,C,accepted_on_validation,prior_test,final_test,delta_vs_prior_pp,delta_vs_15_model_best_pp
+PhysioNet task 1,1.0,0.01,False,0.718182,0.718182,+0.000,-0.101
+PhysioNet task 2,1.0,0.01,False,0.753535,0.753535,+0.000,+1.111
+PhysioNet task 3,1.0,0.01,False,0.759596,0.759596,+0.000,+0.202
+PhysioNet task 4,1.0,0.01,False,0.651515,0.651515,+0.000,-1.111
+BCI IIIA,0.5,0.01,False,0.653061,0.653061,+0.000,+6.122
+BCI IIIB,1.0,0.1,False,0.842857,0.842857,+0.000,+1.905

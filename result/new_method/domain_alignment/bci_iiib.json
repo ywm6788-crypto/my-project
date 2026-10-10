@@ -1,0 +1,165 @@
+{
+  "dataset": "BCI IIIB",
+  "method": "unlabeled domain covariance alignment + validation-selected blend with prior best",
+  "adaptation_scope": "per subject for PhysioNet; one unlabeled provided split batch for BCI (transductive)",
+  "selected_aligned_probability_weight": 0.0,
+  "validation_accuracy": 0.819047619047619,
+  "prior_validation_accuracy": 0.819047619047619,
+  "aligned_only_validation_accuracy": 0.680952380952381,
+  "validation_weight_sweep": {
+    "aligned_weight_0.00": 0.819047619047619,
+    "aligned_weight_0.25": 0.8095238095238095,
+    "aligned_weight_0.50": 0.7761904761904762,
+    "aligned_weight_0.75": 0.7142857142857143,
+    "aligned_weight_1.00": 0.680952380952381
+  },
+  "aligned_feature_selection": {
+    "bands_hz": [
+      [
+        24.0,
+        30.0
+      ],
+      [
+        20.0,
+        24.0
+      ],
+      [
+        8.0,
+        12.0
+      ],
+      [
+        12.0,
+        16.0
+      ]
+    ],
+    "per_band": [
+      {
+        "band_hz": [
+          8.0,
+          12.0
+        ],
+        "family": "temporal_power",
+        "validation_accuracy": 0.6095238095238096,
+        "C": 0.1,
+        "kernel": "rbf",
+        "gamma": "scale",
+        "standardize": true
+      },
+      {
+        "band_hz": [
+          12.0,
+          16.0
+        ],
+        "family": "temporal_power",
+        "validation_accuracy": 0.6,
+        "C": 25.0,
+        "kernel": "knn-distance",
+        "gamma": null,
+        "standardize": true
+      },
+      {
+        "band_hz": [
+          16.0,
+          20.0
+        ],
+        "family": "tangent",
+        "validation_accuracy": 0.5857142857142857,
+        "C": 0.01,
+        "kernel": "mlp-(16,)",
+        "gamma": null,
+        "standardize": true
+      },
+      {
+        "band_hz": [
+          20.0,
+          24.0
+        ],
+        "family": "temporal_power",
+        "validation_accuracy": 0.638095238095238,
+        "C": 0.03,
+        "kernel": "linear",
+        "gamma": null,
+        "standardize": false
+      },
+      {
+        "band_hz": [
+          24.0,
+          30.0
+        ],
+        "family": "temporal_power",
+        "validation_accuracy": 0.7095238095238096,
+        "C": 5.0,
+        "kernel": "knn-distance",
+        "gamma": null,
+        "standardize": true
+      }
+    ],
+    "selected_band_count": 4,
+    "validation_accuracy": 0.680952380952381
+  },
+  "alignment_domains": {
+    "train": {
+      "domains": [
+        {
+          "domain": 0,
+          "n_trials": 980,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 2.96637364357487
+        }
+      ],
+      "n_domains": 1
+    },
+    "val": {
+      "domains": [
+        {
+          "domain": 0,
+          "n_trials": 210,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 2.9334159419910764
+        }
+      ],
+      "n_domains": 1
+    },
+    "test": {
+      "domains": [
+        {
+          "domain": 0,
+          "n_trials": 210,
+          "ridge": 0.15,
+          "covariance_condition_number_after_shrinkage": 2.9586158187148666
+        }
+      ],
+      "n_domains": 1
+    }
+  },
+  "test": {
+    "n": 210,
+    "accuracy": 0.8428571428571429,
+    "accuracy_ci95_trial_bootstrap": [
+      0.7904761904761904,
+      0.8904761904761904
+    ],
+    "macro_f1": 0.8428250663400694,
+    "kappa": 0.6857142857142857,
+    "confusion_matrix": [
+      [
+        87,
+        18
+      ],
+      [
+        15,
+        90
+      ]
+    ]
+  },
+  "prior_test_accuracy": 0.8428571428571429,
+  "delta_vs_prior_best_pp": 0.0,
+  "baseline": {
+    "best_model": "EEG-Deformer",
+    "best_accuracy": 0.8238095238095238,
+    "mean_accuracy": 0.7149659863945578,
+    "model_rows": 14
+  },
+  "delta_vs_15_model_best_pp": 1.904761904761909,
+  "runtime_seconds": 24.75
+}

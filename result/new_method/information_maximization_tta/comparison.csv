@@ -1,0 +1,7 @@
+﻿dataset,selected_preset,validation_before,validation_after,prior_test,final_test,delta_vs_prior_pp,delta_vs_best_15_model_pp
+PhysioNet task 1,mi_full,0.816162,0.826263,0.709091,0.718182,+0.909,-0.101
+PhysioNet task 2,no_adaptation,0.769697,0.769697,0.753535,0.753535,+0.000,+1.111
+PhysioNet task 3,mi_small_shift,0.814141,0.818182,0.756566,0.759596,+0.303,+0.202
+PhysioNet task 4,no_adaptation,0.698990,0.698990,0.651515,0.651515,+0.000,-1.111
+BCI IIIA,no_adaptation,0.877551,0.877551,0.653061,0.653061,+0.000,+6.122
+BCI IIIB,no_adaptation,0.819048,0.819048,0.842857,0.842857,+0.000,+1.905

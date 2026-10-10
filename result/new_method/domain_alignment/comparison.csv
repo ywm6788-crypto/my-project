@@ -1,0 +1,7 @@
+﻿dataset,prior_test_accuracy,aligned_only_validation_accuracy,validation_accuracy,selected_aligned_probability_weight,test_accuracy,delta_vs_prior_best_pp,best_baseline_accuracy,delta_vs_15_model_best_pp
+PhysioNet task 1,0.706061,0.777778,0.816162,0.25,0.709091,+0.303,0.719192,-1.010
+PhysioNet task 2,0.753535,0.707071,0.769697,0.0,0.753535,+0.000,0.742424,+1.111
+PhysioNet task 3,0.737374,0.814141,0.814141,1.0,0.756566,+1.919,0.757576,-0.101
+PhysioNet task 4,0.610101,0.654545,0.676768,0.0,0.610101,+0.000,0.662626,-5.253
+BCI IIIA,0.653061,0.857143,0.877551,0.25,0.653061,+0.000,0.591837,+6.122
+BCI IIIB,0.842857,0.680952,0.819048,0.0,0.842857,+0.000,0.823810,+1.905

@@ -1,0 +1,359 @@
+{
+  "audit": "independent recomputation from saved per-trial probabilities and original baseline CSV files",
+  "checks_passed": 43,
+  "checks_total": 43,
+  "all_checks_passed": true,
+  "tasks": [
+    {
+      "dataset": "PhysioNet task 1",
+      "n_test": 990,
+      "correct": 711,
+      "final_accuracy": 0.7181818181818181,
+      "current_source_accuracy_before_tta": 0.7090909090909091,
+      "round2_accuracy": 0.706060606060606,
+      "historical_15_model_best_name": "shallowconvnet",
+      "historical_15_model_best_accuracy": 0.7191919191919192,
+      "delta_vs_historical_best_pp": -0.10101010101010166,
+      "selected_tta_preset": "mi_full",
+      "subject_accuracy_ci_or_trial_ci": {
+        "unit": "exact empirical subject-cluster bootstrap",
+        "n_subjects": 22,
+        "trials_per_subject": 45,
+        "accuracy_ci95": [
+          0.6777777777777778,
+          0.7575757575757576
+        ],
+        "accuracy_support_points": 388
+      },
+      "paired_delta_vs_round2": {
+        "n_subjects": 22,
+        "trials_per_subject": 45,
+        "delta_pp": 1.212121212121212,
+        "ci95_delta_pp": [
+          -1.3131313131313131,
+          3.6363636363636362
+        ],
+        "bootstrap_probability_delta_le_zero": 0.1779523553935983,
+        "support_points": 219,
+        "bootstrap": "exact empirical subject-cluster distribution"
+      },
+      "round3_source_delta_vs_round2": {
+        "n_subjects": 22,
+        "trials_per_subject": 45,
+        "delta_pp": 0.303030303030303,
+        "ci95_delta_pp": [
+          -2.2222222222222223,
+          2.727272727272727
+        ],
+        "bootstrap_probability_delta_le_zero": 0.4156719838794735,
+        "support_points": 262,
+        "bootstrap": "exact empirical subject-cluster distribution"
+      },
+      "paired_delta_from_tta": {
+        "n_subjects": 22,
+        "trials_per_subject": 45,
+        "delta_pp": 0.9090909090909092,
+        "ci95_delta_pp": [
+          -0.10101010101010101,
+          1.9191919191919191
+        ],
+        "bootstrap_probability_delta_le_zero": 0.050843845484516294,
+        "support_points": 111,
+        "bootstrap": "exact empirical subject-cluster distribution"
+      },
+      "riemannian_candidate_rejected": true,
+      "riemannian_candidate_validation_accuracy": 0.7131313131313132,
+      "riemannian_candidate_test_diagnostic": 0.696969696969697,
+      "initial_custom_method_accuracy": 0.652525,
+      "round2_accuracy_from_table": 0.706061,
+      "round2_with_task2_special_accuracy": 0.706061,
+      "round3_accuracy": 0.709091
+    },
+    {
+      "dataset": "PhysioNet task 2",
+      "n_test": 990,
+      "correct": 746,
+      "final_accuracy": 0.7535353535353535,
+      "current_source_accuracy_before_tta": 0.7535353535353535,
+      "round2_accuracy": 0.6181818181818182,
+      "historical_15_model_best_name": "shallowconvnet",
+      "historical_15_model_best_accuracy": 0.7424242424242424,
+      "delta_vs_historical_best_pp": 1.1111111111111072,
+      "selected_tta_preset": "no_adaptation",
+      "subject_accuracy_ci_or_trial_ci": {
+        "unit": "exact empirical subject-cluster bootstrap",
+        "n_subjects": 22,
+        "trials_per_subject": 45,
+        "accuracy_ci95": [
+          0.704040404040404,
+          0.803030303030303
+        ],
+        "accuracy_support_points": 417
+      },
+      "paired_delta_vs_round2": {
+        "n_subjects": 22,
+        "trials_per_subject": 45,
+        "delta_pp": 13.535353535353536,
+        "ci95_delta_pp": [
+          9.393939393939393,
+          17.575757575757574
+        ],
+        "bootstrap_probability_delta_le_zero": 7.897064481631744e-12,
+        "support_points": 329,
+        "bootstrap": "exact empirical subject-cluster distribution"
+      },
+      "round3_source_delta_vs_round2": {
+        "n_subjects": 22,
+        "trials_per_subject": 45,
+        "delta_pp": 13.535353535353536,
+        "ci95_delta_pp": [
+          9.393939393939393,
+          17.575757575757574
+        ],
+        "bootstrap_probability_delta_le_zero": 7.897064481631744e-12,
+        "support_points": 329,
+        "bootstrap": "exact empirical subject-cluster distribution"
+      },
+      "paired_delta_from_tta": {
+        "n_subjects": 22,
+        "trials_per_subject": 45,
+        "delta_pp": 0.0,
+        "ci95_delta_pp": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_probability_delta_le_zero": 1.0,
+        "support_points": 1,
+        "bootstrap": "exact empirical subject-cluster distribution"
+      },
+      "riemannian_candidate_rejected": true,
+      "riemannian_candidate_validation_accuracy": 0.6585858585858586,
+      "riemannian_candidate_test_diagnostic": 0.6282828282828283,
+      "initial_custom_method_accuracy": 0.622222,
+      "round2_accuracy_from_table": 0.618182,
+      "round2_with_task2_special_accuracy": 0.7535353535353535,
+      "round3_accuracy": 0.753535
+    },
+    {
+      "dataset": "PhysioNet task 3",
+      "n_test": 990,
+      "correct": 752,
+      "final_accuracy": 0.7595959595959596,
+      "current_source_accuracy_before_tta": 0.7565656565656566,
+      "round2_accuracy": 0.7373737373737373,
+      "historical_15_model_best_name": "shallowconvnet",
+      "historical_15_model_best_accuracy": 0.7575757575757576,
+      "delta_vs_historical_best_pp": 0.20202020202020332,
+      "selected_tta_preset": "mi_small_shift",
+      "subject_accuracy_ci_or_trial_ci": {
+        "unit": "exact empirical subject-cluster bootstrap",
+        "n_subjects": 22,
+        "trials_per_subject": 45,
+        "accuracy_ci95": [
+          0.706060606060606,
+          0.8121212121212121
+        ],
+        "accuracy_support_points": 441
+      },
+      "paired_delta_vs_round2": {
+        "n_subjects": 22,
+        "trials_per_subject": 45,
+        "delta_pp": 2.2222222222222223,
+        "ci95_delta_pp": [
+          -1.4141414141414141,
+          5.858585858585859
+        ],
+        "bootstrap_probability_delta_le_zero": 0.1205519045054251,
+        "support_points": 353,
+        "bootstrap": "exact empirical subject-cluster distribution"
+      },
+      "round3_source_delta_vs_round2": {
+        "n_subjects": 22,
+        "trials_per_subject": 45,
+        "delta_pp": 1.9191919191919191,
+        "ci95_delta_pp": [
+          -1.8181818181818181,
+          5.555555555555555
+        ],
+        "bootstrap_probability_delta_le_zero": 0.16082121038897265,
+        "support_points": 372,
+        "bootstrap": "exact empirical subject-cluster distribution"
+      },
+      "paired_delta_from_tta": {
+        "n_subjects": 22,
+        "trials_per_subject": 45,
+        "delta_pp": 0.303030303030303,
+        "ci95_delta_pp": [
+          0.0,
+          0.6060606060606061
+        ],
+        "bootstrap_probability_delta_le_zero": 0.03974479331603689,
+        "support_points": 23,
+        "bootstrap": "exact empirical subject-cluster distribution"
+      },
+      "riemannian_candidate_rejected": true,
+      "riemannian_candidate_validation_accuracy": 0.7858585858585858,
+      "riemannian_candidate_test_diagnostic": 0.7353535353535353,
+      "initial_custom_method_accuracy": 0.682828,
+      "round2_accuracy_from_table": 0.737374,
+      "round2_with_task2_special_accuracy": 0.737374,
+      "round3_accuracy": 0.756566
+    },
+    {
+      "dataset": "PhysioNet task 4",
+      "n_test": 990,
+      "correct": 645,
+      "final_accuracy": 0.6515151515151515,
+      "current_source_accuracy_before_tta": 0.6515151515151515,
+      "round2_accuracy": 0.6101010101010101,
+      "historical_15_model_best_name": "shallowconvnet",
+      "historical_15_model_best_accuracy": 0.6626262626262627,
+      "delta_vs_historical_best_pp": -1.1111111111111183,
+      "selected_tta_preset": "no_adaptation",
+      "subject_accuracy_ci_or_trial_ci": {
+        "unit": "exact empirical subject-cluster bootstrap",
+        "n_subjects": 22,
+        "trials_per_subject": 45,
+        "accuracy_ci95": [
+          0.6050505050505051,
+          0.7
+        ],
+        "accuracy_support_points": 520
+      },
+      "paired_delta_vs_round2": {
+        "n_subjects": 22,
+        "trials_per_subject": 45,
+        "delta_pp": 4.141414141414141,
+        "ci95_delta_pp": [
+          1.1111111111111112,
+          7.474747474747474
+        ],
+        "bootstrap_probability_delta_le_zero": 0.003388832367837563,
+        "support_points": 285,
+        "bootstrap": "exact empirical subject-cluster distribution"
+      },
+      "round3_source_delta_vs_round2": {
+        "n_subjects": 22,
+        "trials_per_subject": 45,
+        "delta_pp": 4.141414141414141,
+        "ci95_delta_pp": [
+          1.1111111111111112,
+          7.474747474747474
+        ],
+        "bootstrap_probability_delta_le_zero": 0.003388832367837563,
+        "support_points": 285,
+        "bootstrap": "exact empirical subject-cluster distribution"
+      },
+      "paired_delta_from_tta": {
+        "n_subjects": 22,
+        "trials_per_subject": 45,
+        "delta_pp": 0.0,
+        "ci95_delta_pp": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_probability_delta_le_zero": 1.0,
+        "support_points": 1,
+        "bootstrap": "exact empirical subject-cluster distribution"
+      },
+      "riemannian_candidate_rejected": true,
+      "riemannian_candidate_validation_accuracy": 0.593939393939394,
+      "riemannian_candidate_test_diagnostic": 0.6454545454545455,
+      "initial_custom_method_accuracy": 0.623232,
+      "round2_accuracy_from_table": 0.610101,
+      "round2_with_task2_special_accuracy": 0.610101,
+      "round3_accuracy": 0.651515
+    },
+    {
+      "dataset": "BCI IIIA",
+      "n_test": 49,
+      "correct": 32,
+      "final_accuracy": 0.6530612244897959,
+      "current_source_accuracy_before_tta": 0.6530612244897959,
+      "round2_accuracy": 0.6530612244897959,
+      "historical_15_model_best_name": "EEG-Conformer",
+      "historical_15_model_best_accuracy": 0.5918367346938775,
+      "delta_vs_historical_best_pp": 6.122448979591832,
+      "selected_tta_preset": "no_adaptation",
+      "subject_accuracy_ci_or_trial_ci": {
+        "unit": "trial bootstrap (subject IDs unavailable)",
+        "accuracy_ci95": [
+          0.5102040816326531,
+          0.7755102040816326
+        ]
+      },
+      "paired_delta_vs_round2": {
+        "unit": "paired trial bootstrap; not subject-clustered",
+        "delta_pp": 0.0,
+        "ci95_delta_pp": null
+      },
+      "round3_source_delta_vs_round2": {
+        "unit": "paired trial comparison; subject IDs unavailable",
+        "delta_pp": 0.0,
+        "ci95_delta_pp": null
+      },
+      "paired_delta_from_tta": {
+        "unit": "paired trial bootstrap; not subject-clustered",
+        "delta_pp": 0.0,
+        "ci95_delta_pp": null
+      },
+      "riemannian_candidate_rejected": true,
+      "riemannian_candidate_validation_accuracy": 0.6122448979591837,
+      "riemannian_candidate_test_diagnostic": 0.6530612244897959,
+      "initial_custom_method_accuracy": 0.653061,
+      "round2_accuracy_from_table": 0.653061,
+      "round2_with_task2_special_accuracy": 0.653061,
+      "round3_accuracy": 0.653061
+    },
+    {
+      "dataset": "BCI IIIB",
+      "n_test": 210,
+      "correct": 177,
+      "final_accuracy": 0.8428571428571429,
+      "current_source_accuracy_before_tta": 0.8428571428571429,
+      "round2_accuracy": 0.8428571428571429,
+      "historical_15_model_best_name": "EEG-Deformer",
+      "historical_15_model_best_accuracy": 0.8238095238095238,
+      "delta_vs_historical_best_pp": 1.904761904761909,
+      "selected_tta_preset": "no_adaptation",
+      "subject_accuracy_ci_or_trial_ci": {
+        "unit": "trial bootstrap (subject IDs unavailable)",
+        "accuracy_ci95": [
+          0.7904761904761904,
+          0.8904761904761904
+        ]
+      },
+      "paired_delta_vs_round2": {
+        "unit": "paired trial bootstrap; not subject-clustered",
+        "delta_pp": 0.0,
+        "ci95_delta_pp": null
+      },
+      "round3_source_delta_vs_round2": {
+        "unit": "paired trial comparison; subject IDs unavailable",
+        "delta_pp": 0.0,
+        "ci95_delta_pp": null
+      },
+      "paired_delta_from_tta": {
+        "unit": "paired trial bootstrap; not subject-clustered",
+        "delta_pp": 0.0,
+        "ci95_delta_pp": null
+      },
+      "riemannian_candidate_rejected": true,
+      "riemannian_candidate_validation_accuracy": 0.6285714285714286,
+      "riemannian_candidate_test_diagnostic": 0.6190476190476191,
+      "initial_custom_method_accuracy": 0.719048,
+      "round2_accuracy_from_table": 0.842857,
+      "round2_with_task2_special_accuracy": 0.842857,
+      "round3_accuracy": 0.842857
+    }
+  ],
+  "trajectory_means": {
+    "initial_custom_method_mean": 0.6588193333333333,
+    "round2_original_mean": 0.694606,
+    "round2_with_task2_special_mean": 0.7171648922558923,
+    "round3_mean": 0.7277708333333334,
+    "final_tta_mean": 0.729791,
+    "historical_15_model_best_mean": 0.7162440733869305
+  },
+  "caveat": "The base models were not retrained during this audit. The final TTA selection script was rerun; its inputs are saved outputs from the earlier full experiments."
+}

@@ -1,0 +1,123 @@
+{
+  "dataset": "PhysioNet task 2",
+  "task": 2,
+  "method": "Tri-view filter-bank hybrid classifier (TV-FB-Hybrid)",
+  "split": "existing benchmark split; hyperparameters selected on validation partition",
+  "sampling_rate_hz": 160.0,
+  "train_trials": 3433,
+  "validation_trials": 495,
+  "metrics": {
+    "n_test": 990,
+    "accuracy": 0.6222222222222222,
+    "accuracy_ci95": [
+      0.591919191919192,
+      0.6525252525252525
+    ],
+    "macro_f1": 0.6208294930875576,
+    "kappa": 0.2440865790967256,
+    "confusion_matrix": [
+      [
+        338,
+        159
+      ],
+      [
+        215,
+        278
+      ]
+    ]
+  },
+  "selection": {
+    "bands_hz": [
+      [
+        8.0,
+        12.0
+      ],
+      [
+        20.0,
+        24.0
+      ],
+      [
+        24.0,
+        30.0
+      ],
+      [
+        12.0,
+        16.0
+      ]
+    ],
+    "per_band": [
+      {
+        "band_hz": [
+          8.0,
+          12.0
+        ],
+        "family": "CSP",
+        "validation_accuracy": 0.6848484848484848,
+        "C": 0.003,
+        "kernel": "linear",
+        "gamma": null,
+        "standardize": false
+      },
+      {
+        "band_hz": [
+          12.0,
+          16.0
+        ],
+        "family": "CSP",
+        "validation_accuracy": 0.597979797979798,
+        "C": 0.03,
+        "kernel": "linear",
+        "gamma": null,
+        "standardize": false
+      },
+      {
+        "band_hz": [
+          16.0,
+          20.0
+        ],
+        "family": "CSP",
+        "validation_accuracy": 0.5515151515151515,
+        "C": 0.03,
+        "kernel": "linear",
+        "gamma": null,
+        "standardize": false
+      },
+      {
+        "band_hz": [
+          20.0,
+          24.0
+        ],
+        "family": "tangent",
+        "validation_accuracy": 0.6242424242424243,
+        "C": 0.003,
+        "kernel": "linear",
+        "gamma": null,
+        "standardize": true
+      },
+      {
+        "band_hz": [
+          24.0,
+          30.0
+        ],
+        "family": "tangent",
+        "validation_accuracy": 0.604040404040404,
+        "C": 0.03,
+        "kernel": "linear",
+        "gamma": null,
+        "standardize": false
+      }
+    ],
+    "selected_band_count": 4,
+    "validation_accuracy": 0.6868686868686869
+  },
+  "baseline": {
+    "path": "result\\Physionet_task2.csv",
+    "n_models": 15,
+    "mean_accuracy": 0.5641077441077441,
+    "best_model": "shallowconvnet",
+    "best_accuracy": 0.7424242424242424
+  },
+  "runtime_seconds": 28.66,
+  "delta_vs_best_baseline_pp": -12.02,
+  "delta_vs_15_model_mean_pp": 5.811
+}

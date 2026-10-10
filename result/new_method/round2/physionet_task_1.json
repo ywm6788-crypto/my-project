@@ -1,0 +1,171 @@
+{
+  "dataset": "PhysioNet task 1",
+  "selected_by_validation": {
+    "selected": "full_channel_filterbank + ShallowConvNet; weight_right=0.55",
+    "blend_search": {
+      "selected_val_accuracy": 0.7818181818181819,
+      "candidates_val_accuracy": {
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.00": 0.7090909090909091,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.05": 0.7131313131313132,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.10": 0.7252525252525253,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.15": 0.7393939393939394,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.20": 0.7454545454545455,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.25": 0.7535353535353535,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.30": 0.7636363636363637,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.35": 0.7696969696969697,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.40": 0.7737373737373737,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.45": 0.7757575757575758,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.50": 0.7797979797979798,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.55": 0.7818181818181819,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.60": 0.7818181818181819,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.65": 0.7797979797979798,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.70": 0.7757575757575758,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.75": 0.7676767676767676,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.80": 0.7616161616161616,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.85": 0.7595959595959596,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.90": 0.7535353535353535,
+        "full_channel_filterbank + ShallowConvNet; weight_right=0.95": 0.7555555555555555,
+        "full_channel_filterbank + ShallowConvNet; weight_right=1.00": 0.7575757575757576,
+        "full_channel_filterbank": 0.7090909090909091,
+        "ShallowConvNet": 0.7575757575757576
+      }
+    },
+    "filterbank": {
+      "bands_hz": [
+        [
+          8.0,
+          12.0
+        ],
+        [
+          20.0,
+          24.0
+        ],
+        [
+          24.0,
+          30.0
+        ],
+        [
+          16.0,
+          20.0
+        ]
+      ],
+      "validation_accuracy": 0.7090909090909091,
+      "per_band": [
+        {
+          "band_hz": [
+            8.0,
+            12.0
+          ],
+          "family": "CSP",
+          "components_per_class": 6,
+          "validation_accuracy": 0.6666666666666666,
+          "kernel": "linear",
+          "C": 3.0
+        },
+        {
+          "band_hz": [
+            12.0,
+            16.0
+          ],
+          "family": "CSP",
+          "components_per_class": 2,
+          "validation_accuracy": 0.6161616161616161,
+          "kernel": "linear",
+          "C": 3.0
+        },
+        {
+          "band_hz": [
+            16.0,
+            20.0
+          ],
+          "family": "CSP",
+          "components_per_class": 2,
+          "validation_accuracy": 0.6282828282828283,
+          "kernel": "linear",
+          "C": 0.003
+        },
+        {
+          "band_hz": [
+            20.0,
+            24.0
+          ],
+          "family": "CSP",
+          "components_per_class": 6,
+          "validation_accuracy": 0.6444444444444445,
+          "kernel": "linear",
+          "C": 3.0
+        },
+        {
+          "band_hz": [
+            24.0,
+            30.0
+          ],
+          "family": "temporal_power",
+          "components_per_class": null,
+          "validation_accuracy": 0.6343434343434343,
+          "kernel": "linear",
+          "C": 0.003
+        }
+      ]
+    },
+    "shallowconvnet": {
+      "best_val_accuracy": 0.7575757575757576,
+      "epochs_run": 29,
+      "seed": 42
+    },
+    "portfolio_candidates_val_accuracy": {
+      "ROI_plus_all_channel_feature_blend": 0.7737373737373737,
+      "ShallowConvNet_plus_full_channel_feature_blend": 0.7818181818181819
+    }
+  },
+  "baseline": {
+    "best_model": "shallowconvnet",
+    "best_accuracy": 0.7191919191919192,
+    "mean_accuracy": 0.5655892255892258,
+    "model_rows": 15
+  },
+  "validation": {
+    "n": 495,
+    "accuracy": 0.7818181818181819,
+    "accuracy_ci95_trial_bootstrap": [
+      0.7454545454545455,
+      0.8161616161616162
+    ],
+    "macro_f1": 0.7818101674992654,
+    "kappa": 0.5638766519823788,
+    "confusion_matrix": [
+      [
+        192,
+        60
+      ],
+      [
+        48,
+        195
+      ]
+    ]
+  },
+  "test": {
+    "n": 990,
+    "accuracy": 0.706060606060606,
+    "accuracy_ci95_trial_bootstrap": [
+      0.6767676767676768,
+      0.7353535353535353
+    ],
+    "macro_f1": 0.7060363115408987,
+    "kappa": 0.4121452037464036,
+    "confusion_matrix": [
+      [
+        354,
+        140
+      ],
+      [
+        151,
+        345
+      ]
+    ]
+  },
+  "delta_vs_best_baseline_pp": -1.3131313131313105,
+  "runtime_seconds": 95.41,
+  "input_channels": 64,
+  "delta_vs_model_mean_pp": 14.04713804713803
+}

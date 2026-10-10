@@ -1,0 +1,374 @@
+{
+  "dataset": "PhysioNet task 2",
+  "method": "Subject-balanced grouped-CV temporal filter-bank CSP plus validation-selected ShallowConvNet portfolio",
+  "validation_selection": {
+    "selected": "narrow_mu_beta_full_csp2 + ShallowConvNet_seed42; right_weight=0.75",
+    "accuracy": 0.7696969696969697,
+    "candidate_accuracy": {
+      "broad_mu_beta_phases_csp2": 0.6626262626262627,
+      "narrow_mu_beta_full_csp2": 0.6666666666666666,
+      "narrow_mu_beta_phases_csp2": 0.6424242424242425,
+      "ShallowConvNet_seed42": 0.7515151515151515,
+      "broad_mu_beta_phases_csp2 + narrow_mu_beta_full_csp2; right_weight=0.25": 0.6606060606060606,
+      "broad_mu_beta_phases_csp2 + narrow_mu_beta_full_csp2; right_weight=0.50": 0.6848484848484848,
+      "broad_mu_beta_phases_csp2 + narrow_mu_beta_full_csp2; right_weight=0.75": 0.6787878787878788,
+      "broad_mu_beta_phases_csp2 + narrow_mu_beta_phases_csp2; right_weight=0.25": 0.6747474747474748,
+      "broad_mu_beta_phases_csp2 + narrow_mu_beta_phases_csp2; right_weight=0.50": 0.6767676767676768,
+      "broad_mu_beta_phases_csp2 + narrow_mu_beta_phases_csp2; right_weight=0.75": 0.6585858585858586,
+      "broad_mu_beta_phases_csp2 + ShallowConvNet_seed42; right_weight=0.25": 0.694949494949495,
+      "broad_mu_beta_phases_csp2 + ShallowConvNet_seed42; right_weight=0.50": 0.7252525252525253,
+      "broad_mu_beta_phases_csp2 + ShallowConvNet_seed42; right_weight=0.75": 0.7616161616161616,
+      "narrow_mu_beta_full_csp2 + narrow_mu_beta_phases_csp2; right_weight=0.25": 0.6787878787878788,
+      "narrow_mu_beta_full_csp2 + narrow_mu_beta_phases_csp2; right_weight=0.50": 0.6787878787878788,
+      "narrow_mu_beta_full_csp2 + narrow_mu_beta_phases_csp2; right_weight=0.75": 0.6545454545454545,
+      "narrow_mu_beta_full_csp2 + ShallowConvNet_seed42; right_weight=0.25": 0.705050505050505,
+      "narrow_mu_beta_full_csp2 + ShallowConvNet_seed42; right_weight=0.50": 0.7333333333333333,
+      "narrow_mu_beta_full_csp2 + ShallowConvNet_seed42; right_weight=0.75": 0.7696969696969697,
+      "narrow_mu_beta_phases_csp2 + ShallowConvNet_seed42; right_weight=0.25": 0.6848484848484848,
+      "narrow_mu_beta_phases_csp2 + ShallowConvNet_seed42; right_weight=0.50": 0.7151515151515152,
+      "narrow_mu_beta_phases_csp2 + ShallowConvNet_seed42; right_weight=0.75": 0.7575757575757576
+    }
+  },
+  "grouped_cv": {
+    "grouped_cv_folds": 5,
+    "ranked_configs": [
+      {
+        "name": "broad_mu_beta_phases_csp2",
+        "components": 2,
+        "c": 1.0,
+        "cv_mean_accuracy": 0.634101775426922,
+        "cv_subject_macro_accuracy": 0.6341072011423909,
+        "cv_fold_accuracy": [
+          0.6404657933042213,
+          0.6233576642335766,
+          0.6385372714486639,
+          0.6,
+          0.6681481481481482
+        ]
+      },
+      {
+        "name": "narrow_mu_beta_full_csp2",
+        "components": 2,
+        "c": 0.001,
+        "cv_mean_accuracy": 0.6255678652256504,
+        "cv_subject_macro_accuracy": 0.6259649292805658,
+        "cv_fold_accuracy": [
+          0.6244541484716157,
+          0.637956204379562,
+          0.6343178621659634,
+          0.5925925925925926,
+          0.6385185185185185
+        ]
+      },
+      {
+        "name": "narrow_mu_beta_phases_csp2",
+        "components": 2,
+        "c": 1.0,
+        "cv_mean_accuracy": 0.6218016498220995,
+        "cv_subject_macro_accuracy": 0.6219189333152001,
+        "cv_fold_accuracy": [
+          0.6215429403202329,
+          0.6277372262773723,
+          0.630098452883263,
+          0.6029629629629629,
+          0.6266666666666667
+        ]
+      },
+      {
+        "name": "classic_phases_csp3",
+        "components": 3,
+        "c": 0.001,
+        "cv_mean_accuracy": 0.6189412993925203,
+        "cv_subject_macro_accuracy": 0.6193609354458497,
+        "cv_fold_accuracy": [
+          0.6157205240174672,
+          0.6102189781021898,
+          0.6272855133614628,
+          0.6044444444444445,
+          0.6370370370370371
+        ]
+      },
+      {
+        "name": "classic_phases_csp2",
+        "components": 2,
+        "c": 0.001,
+        "cv_mean_accuracy": 0.6182208128085865,
+        "cv_subject_macro_accuracy": 0.6186964900947458,
+        "cv_fold_accuracy": [
+          0.6055312954876274,
+          0.6364963503649635,
+          0.6075949367088608,
+          0.597037037037037,
+          0.6444444444444445
+        ]
+      },
+      {
+        "name": "classic_phases_plus_full_csp2",
+        "components": 2,
+        "c": 0.001,
+        "cv_mean_accuracy": 0.6167231531067838,
+        "cv_subject_macro_accuracy": 0.6171917527993109,
+        "cv_fold_accuracy": [
+          0.604075691411936,
+          0.6335766423357664,
+          0.6104078762306611,
+          0.5911111111111111,
+          0.6444444444444445
+        ]
+      },
+      {
+        "name": "classic_full_csp2",
+        "components": 2,
+        "c": 0.01,
+        "cv_mean_accuracy": 0.6084390067342852,
+        "cv_subject_macro_accuracy": 0.6087499603336507,
+        "cv_fold_accuracy": [
+          0.6098981077147017,
+          0.6072992700729927,
+          0.6146272855133614,
+          0.5792592592592593,
+          0.6311111111111111
+        ]
+      }
+    ],
+    "shortlist_validation_accuracy": {
+      "broad_mu_beta_phases_csp2": 0.6626262626262627,
+      "narrow_mu_beta_full_csp2": 0.6666666666666666,
+      "narrow_mu_beta_phases_csp2": 0.6424242424242425
+    }
+  },
+  "shallowconvnet": {
+    "best_validation_accuracy": 0.7515151515151515,
+    "epochs_run": 36
+  },
+  "baseline": {
+    "best_model": "shallowconvnet",
+    "best_accuracy": 0.7424242424242424,
+    "mean_accuracy": 0.5641077441077441,
+    "model_rows": 15
+  },
+  "validation": {
+    "n": 495,
+    "accuracy": 0.7696969696969697,
+    "accuracy_ci95_trial_bootstrap": [
+      0.7313131313131314,
+      0.806060606060606
+    ],
+    "macro_f1": 0.7690097259062776,
+    "kappa": 0.5392942866939895,
+    "confusion_matrix": [
+      [
+        177,
+        70
+      ],
+      [
+        44,
+        204
+      ]
+    ]
+  },
+  "test": {
+    "n": 990,
+    "accuracy": 0.7535353535353535,
+    "accuracy_ci95_trial_bootstrap": [
+      0.7262626262626263,
+      0.7808080808080808
+    ],
+    "macro_f1": 0.7530475462192434,
+    "kappa": 0.5069016620328978,
+    "confusion_matrix": [
+      [
+        395,
+        102
+      ],
+      [
+        142,
+        351
+      ]
+    ]
+  },
+  "delta_vs_best_baseline_pp": 1.1111111111111072,
+  "delta_vs_model_mean_pp": 18.942760942760938,
+  "split_subject_counts": {
+    "train": 76,
+    "val": 11,
+    "test": 22
+  },
+  "runtime_seconds": 1379.8,
+  "caveat": "Trial bootstrap intervals do not account for subject clustering; a single fixed test split cannot establish statistical significance.",
+  "clustered_comparison": {
+    "dataset": "PhysioNet task 2",
+    "test_subjects": [
+      1,
+      5,
+      11,
+      12,
+      23,
+      27,
+      37,
+      43,
+      45,
+      48,
+      57,
+      65,
+      69,
+      71,
+      73,
+      77,
+      79,
+      81,
+      82,
+      85,
+      91,
+      97
+    ],
+    "test_trial_counts_by_subject": {
+      "1": 45,
+      "5": 45,
+      "11": 45,
+      "12": 45,
+      "23": 45,
+      "27": 45,
+      "37": 45,
+      "43": 45,
+      "45": 45,
+      "48": 45,
+      "57": 45,
+      "65": 45,
+      "69": 45,
+      "71": 45,
+      "73": 45,
+      "77": 45,
+      "79": 45,
+      "81": 45,
+      "82": 45,
+      "85": 45,
+      "91": 45,
+      "97": 45
+    },
+    "new_accuracy_subject_cluster_bootstrap_95ci": [
+      0.704040404040404,
+      0.804040404040404
+    ],
+    "paired_delta_vs_round2_feature_method_pp": 13.535353535353536,
+    "paired_delta_vs_round2_subject_cluster_bootstrap_95ci_pp": [
+      9.393939393939393,
+      17.575757575757574
+    ],
+    "paired_cluster_bootstrap_probability_delta_le_zero": 0.0,
+    "per_subject": {
+      "1": {
+        "n": 45,
+        "new_accuracy": 0.8888888888888888,
+        "round2_accuracy": 0.6444444444444445
+      },
+      "5": {
+        "n": 45,
+        "new_accuracy": 0.6444444444444445,
+        "round2_accuracy": 0.5111111111111111
+      },
+      "11": {
+        "n": 45,
+        "new_accuracy": 0.6666666666666666,
+        "round2_accuracy": 0.4888888888888889
+      },
+      "12": {
+        "n": 45,
+        "new_accuracy": 0.7777777777777778,
+        "round2_accuracy": 0.6888888888888889
+      },
+      "23": {
+        "n": 45,
+        "new_accuracy": 0.7111111111111111,
+        "round2_accuracy": 0.6222222222222222
+      },
+      "27": {
+        "n": 45,
+        "new_accuracy": 0.8222222222222222,
+        "round2_accuracy": 0.5333333333333333
+      },
+      "37": {
+        "n": 45,
+        "new_accuracy": 0.5555555555555556,
+        "round2_accuracy": 0.5111111111111111
+      },
+      "43": {
+        "n": 45,
+        "new_accuracy": 0.8888888888888888,
+        "round2_accuracy": 0.8
+      },
+      "45": {
+        "n": 45,
+        "new_accuracy": 0.6888888888888889,
+        "round2_accuracy": 0.5555555555555556
+      },
+      "48": {
+        "n": 45,
+        "new_accuracy": 0.7555555555555555,
+        "round2_accuracy": 0.6222222222222222
+      },
+      "57": {
+        "n": 45,
+        "new_accuracy": 0.6222222222222222,
+        "round2_accuracy": 0.6666666666666666
+      },
+      "65": {
+        "n": 45,
+        "new_accuracy": 0.8888888888888888,
+        "round2_accuracy": 0.7111111111111111
+      },
+      "69": {
+        "n": 45,
+        "new_accuracy": 0.5777777777777777,
+        "round2_accuracy": 0.6222222222222222
+      },
+      "71": {
+        "n": 45,
+        "new_accuracy": 0.8222222222222222,
+        "round2_accuracy": 0.6888888888888889
+      },
+      "73": {
+        "n": 45,
+        "new_accuracy": 0.7777777777777778,
+        "round2_accuracy": 0.7555555555555555
+      },
+      "77": {
+        "n": 45,
+        "new_accuracy": 0.8666666666666667,
+        "round2_accuracy": 0.6
+      },
+      "79": {
+        "n": 45,
+        "new_accuracy": 0.6666666666666666,
+        "round2_accuracy": 0.6444444444444445
+      },
+      "81": {
+        "n": 45,
+        "new_accuracy": 0.6888888888888889,
+        "round2_accuracy": 0.4888888888888889
+      },
+      "82": {
+        "n": 45,
+        "new_accuracy": 0.6,
+        "round2_accuracy": 0.5333333333333333
+      },
+      "85": {
+        "n": 45,
+        "new_accuracy": 0.9777777777777777,
+        "round2_accuracy": 0.7555555555555555
+      },
+      "91": {
+        "n": 45,
+        "new_accuracy": 0.9333333333333333,
+        "round2_accuracy": 0.6444444444444445
+      },
+      "97": {
+        "n": 45,
+        "new_accuracy": 0.7555555555555555,
+        "round2_accuracy": 0.5111111111111111
+      }
+    },
+    "note": "Bootstrap resamples test subjects as clusters. Comparison is paired against the prior round-two feature model; the historical 15-model CSV has no per-trial predictions for a paired significance test."
+  },
+  "historical_best_baseline_significance": "Not established: historical baseline CSV has no trial predictions; the cluster-bootstrap interval for this model also includes the 74.24% point estimate."
+}

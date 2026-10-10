@@ -1,0 +1,139 @@
+{
+  "dataset": "BCI IIIA",
+  "task": null,
+  "method": "Tri-view filter-bank hybrid classifier (TV-FB-Hybrid)",
+  "split": "existing benchmark split; hyperparameters selected on validation partition",
+  "sampling_rate_hz": 250.0,
+  "train_trials": 227,
+  "validation_trials": 49,
+  "metrics": {
+    "n_test": 49,
+    "accuracy": 0.6530612244897959,
+    "accuracy_ci95": [
+      0.5102040816326531,
+      0.7755102040816326
+    ],
+    "macro_f1": 0.6528205128205128,
+    "kappa": 0.5387596899224807,
+    "confusion_matrix": [
+      [
+        7,
+        4,
+        0,
+        0
+      ],
+      [
+        4,
+        8,
+        0,
+        0
+      ],
+      [
+        2,
+        1,
+        7,
+        3
+      ],
+      [
+        1,
+        1,
+        1,
+        10
+      ]
+    ]
+  },
+  "selection": {
+    "bands_hz": [
+      [
+        8.0,
+        12.0
+      ],
+      [
+        12.0,
+        16.0
+      ],
+      [
+        20.0,
+        24.0
+      ],
+      [
+        24.0,
+        30.0
+      ]
+    ],
+    "per_band": [
+      {
+        "band_hz": [
+          8.0,
+          12.0
+        ],
+        "family": "tangent",
+        "validation_accuracy": 0.6530612244897959,
+        "C": 3.0,
+        "kernel": "linear",
+        "gamma": null,
+        "standardize": false
+      },
+      {
+        "band_hz": [
+          12.0,
+          16.0
+        ],
+        "family": "temporal_power",
+        "validation_accuracy": 0.5918367346938775,
+        "C": 3.0,
+        "kernel": "linear",
+        "gamma": null,
+        "standardize": false
+      },
+      {
+        "band_hz": [
+          16.0,
+          20.0
+        ],
+        "family": "CSP",
+        "validation_accuracy": 0.4897959183673469,
+        "C": 5.0,
+        "kernel": "knn-distance",
+        "gamma": null,
+        "standardize": true
+      },
+      {
+        "band_hz": [
+          20.0,
+          24.0
+        ],
+        "family": "CSP",
+        "validation_accuracy": 0.5510204081632653,
+        "C": 100.0,
+        "kernel": "rbf",
+        "gamma": "scale",
+        "standardize": true
+      },
+      {
+        "band_hz": [
+          24.0,
+          30.0
+        ],
+        "family": "CSP",
+        "validation_accuracy": 0.5510204081632653,
+        "C": 25.0,
+        "kernel": "knn-distance",
+        "gamma": null,
+        "standardize": true
+      }
+    ],
+    "selected_band_count": 4,
+    "validation_accuracy": 0.7755102040816326
+  },
+  "baseline": {
+    "path": "result\\IIIA.csv",
+    "n_models": 14,
+    "mean_accuracy": 0.36443148688046645,
+    "best_model": "EEG-Conformer",
+    "best_accuracy": 0.5918367346938775
+  },
+  "runtime_seconds": 21.66,
+  "delta_vs_best_baseline_pp": 6.122,
+  "delta_vs_15_model_mean_pp": 28.863
+}
